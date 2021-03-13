@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using RSTLog.HttpRepository;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -17,7 +18,9 @@ namespace RSTLog
             var builder = WebAssemblyHostBuilder.CreateDefault(args);
             builder.RootComponents.Add<App>("#app");
 
-            builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+            builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https://localhost:44323/api/") });
+
+            builder.Services.AddScoped<ICustomerHttpRepository, CustomerHttpRepository>();
 
             await builder.Build().RunAsync();
         }
