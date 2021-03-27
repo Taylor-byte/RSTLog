@@ -1,4 +1,6 @@
 ﻿@page "/customers"
+@using RSTLog.Components;
+@using System.Net.Http.Headers;
 
 <div class="row">
     <div class="col-md-5">
@@ -10,7 +12,7 @@
 </div>
 <div class="row">
     <div class="col-md-5">
-        @*Place for Customers*@
+        <CustomerTable Customers="CustomerList"></CustomerTable>
     </div>
     <div class="col-md-2">
 
@@ -18,9 +20,11 @@
 </div>
 <div class="row">
     <div class="col-md-5">
-        @*Place for Pagination*@
+        <Pagination MetaData="MetaData" Spread="1" SelectedPage="SelectedPage" />
     </div>
     <div class="col-md-2">
 
     </div>
 </div>
+
+

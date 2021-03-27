@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Ekpn2vwlO95WelDr4hRUEk3aReZqCTJeI3+U6izPBBNVtWJuT5Zpg0qcU4FAwCFgmPZzhG1hv7Iw+tnsGz110A==",
+  "dgSpecHash": "WKLAyLUsEARxU9Zbd65b+mcAYUeSvLGzcwDkK7Z9jdxOvM64gZ9GnoprdoHqFhzKx+kIWBFo/cObI2nnUFdnKw==",
   "success": true,
   "projectFilePath": "C:\\UniProjects\\RSTLog\\RSTLog\\RSTLog\\RSTLog.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "C:\\Users\\jack.KUDOS-SOFTWARE\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\5.0.2\\microsoft.aspnetcore.components.webassembly.5.0.2.nupkg.sha512",
     "C:\\Users\\jack.KUDOS-SOFTWARE\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.devserver\\5.0.2\\microsoft.aspnetcore.components.webassembly.devserver.5.0.2.nupkg.sha512",
     "C:\\Users\\jack.KUDOS-SOFTWARE\\.nuget\\packages\\microsoft.aspnetcore.metadata\\5.0.2\\microsoft.aspnetcore.metadata.5.0.2.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore.webutilities\\2.2.0\\microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
     "C:\\Users\\jack.KUDOS-SOFTWARE\\.nuget\\packages\\microsoft.extensions.configuration\\5.0.0\\microsoft.extensions.configuration.5.0.0.nupkg.sha512",
     "C:\\Users\\jack.KUDOS-SOFTWARE\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\jack.KUDOS-SOFTWARE\\.nuget\\packages\\microsoft.extensions.configuration.binder\\5.0.0\\microsoft.extensions.configuration.binder.5.0.0.nupkg.sha512",
@@ -28,9 +29,12 @@
     "C:\\Users\\jack.KUDOS-SOFTWARE\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "C:\\Users\\jack.KUDOS-SOFTWARE\\.nuget\\packages\\microsoft.jsinterop\\5.0.2\\microsoft.jsinterop.5.0.2.nupkg.sha512",
     "C:\\Users\\jack.KUDOS-SOFTWARE\\.nuget\\packages\\microsoft.jsinterop.webassembly\\5.0.2\\microsoft.jsinterop.webassembly.5.0.2.nupkg.sha512",
+    "C:\\Users\\jack.KUDOS-SOFTWARE\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
+    "C:\\Users\\jack.KUDOS-SOFTWARE\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\jack.KUDOS-SOFTWARE\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512",
     "C:\\Users\\jack.KUDOS-SOFTWARE\\.nuget\\packages\\system.net.http.json\\5.0.0\\system.net.http.json.5.0.0.nupkg.sha512",
-    "C:\\Users\\jack.KUDOS-SOFTWARE\\.nuget\\packages\\microsoft.netcore.app.runtime.browser-wasm\\5.0.2\\microsoft.netcore.app.runtime.browser-wasm.5.0.2.nupkg.sha512"
+    "C:\\Users\\jack.KUDOS-SOFTWARE\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
+    "C:\\Users\\jack.KUDOS-SOFTWARE\\.nuget\\packages\\microsoft.netcore.app.runtime.browser-wasm\\5.0.4\\microsoft.netcore.app.runtime.browser-wasm.5.0.4.nupkg.sha512"
   ],
   "logs": []
 }

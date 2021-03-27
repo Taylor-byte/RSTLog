@@ -82,6 +82,20 @@ using RSTLog.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\UniProjects\RSTLog\RSTLog\RSTLog\Pages\Customers.razor"
+using RSTLog.Components;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\UniProjects\RSTLog\RSTLog\RSTLog\Pages\Customers.razor"
+using System.Net.Http.Headers;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/customers")]
     public partial class Customers : Microsoft.AspNetCore.Components.ComponentBase
     {

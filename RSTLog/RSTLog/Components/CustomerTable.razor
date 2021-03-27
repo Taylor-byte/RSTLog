@@ -1,5 +1,38 @@
-﻿<h3>CustomerTable</h3>
+﻿@if(Customers.Any())
+{
+    <table class="table">
 
-@code {
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Update</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var customer in Customers)
+            {
+            <tr>
+                <td>
+                    <a href="/customer/@customer.Id">
+                        @customer.Name
+                    </a>
+                    
+                </td>
+                <td>
+                    <button type="button" class="btn btn-info">Update</button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+            }
+        </tbody>
 
+    </table>
+
+}
+else
+{
+    <span>Loading Customers...........</span>
 }

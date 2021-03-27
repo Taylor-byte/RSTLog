@@ -1,4 +1,6 @@
-﻿using RSTLog.Models;
+﻿using RSTLog.Features;
+using RSTLog.Models;
+using RSTLog.Paging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +10,7 @@ namespace RSTLog.HttpRepository
 {
     public interface ICustomerHttpRepository
     {
-        Task<List<Customer>> GetCustomers();
+        Task<PagingResponse<Customer>> GetCustomers(RequestParams requestParams);
+        Task<Customer> GetCustomer(int id);
     }
 }

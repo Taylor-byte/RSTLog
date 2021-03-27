@@ -91,7 +91,7 @@ using RSTLog.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 9 "C:\UniProjects\RSTLog\RSTLog\RSTLog\Pages\Counter.razor"
+#line 10 "C:\UniProjects\RSTLog\RSTLog\RSTLog\Pages\Counter.razor"
        
     private int currentCount = 0;
 
