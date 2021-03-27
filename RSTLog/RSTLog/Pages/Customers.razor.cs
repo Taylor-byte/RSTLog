@@ -32,7 +32,7 @@ namespace RSTLog.Pages
         { 
 
             _requestParams.PageNumber = page;
-            //_requestParams.PageSize = pageSize;
+            
 
 
             await GetCustomers();
@@ -43,6 +43,22 @@ namespace RSTLog.Pages
             var pagingResponse = await CustomerRepo.GetCustomers(_requestParams);
             CustomerList = pagingResponse.Items;
             MetaData = pagingResponse.MetaData;
+        }
+
+        public async Task SetPageSize(int pageSize)
+        {
+            _requestParams.PageSize = pageSize;
+            _requestParams.PageNumber = 1;
+
+            await GetCustomers();
+        }
+
+        private async Task SearchChanged(string searchTerm)
+        {
+            _requestParams.PageNumber = 1;
+            _requestParams.SearchTerm = searchTerm;
+
+            await GetCustomers();
         }
     }
 }

@@ -37,9 +37,10 @@ namespace RSTLog.HttpRepository
                 ["totalCount"] = requestParams.TotalCount.ToString(),
                 ["pageNumber"] = requestParams.PageNumber.ToString(),
                 ["currentPage"] = requestParams.CurrentPage.ToString(),
-                ["pageSize"] = requestParams.PageSize.ToString()
-                
-                
+                ["pageSize"] = requestParams.PageSize.ToString(),
+                ["searchTerm"] = requestParams.SearchTerm == null ? "" : requestParams.SearchTerm
+
+
             };
 
             //$"customer?pageNumber={requestParams.PageNumber}"

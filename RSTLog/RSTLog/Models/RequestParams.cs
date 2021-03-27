@@ -36,5 +36,7 @@ namespace RSTLog.Models
         public int CurrentPage { get; set; }
 
         public int TotalCount { get; set; } = maxPageSize;
+
+        public string SearchTerm { get; set; }
     }
 }
