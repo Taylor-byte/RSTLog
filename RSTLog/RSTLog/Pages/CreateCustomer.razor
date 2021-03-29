@@ -1,0 +1,19 @@
+﻿@page "/createCustomer"
+
+
+<h3>Create a new Customer</h3>
+
+<EditForm Model="_customer" OnSubmit="Create" class="card card-body bg-light mt-5">
+    <div class="form-group row">
+        <label for="name" class="col-md-5 col-form-label">Name</label>
+        <div class="col-md-10">
+            <InputText id="name" class="form-control" @bind-Value="_customer.Name" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-right">
+            <button type="submit" class="btn btn-success">Create</button>
+        </div>
+    </div>
+</EditForm>
+

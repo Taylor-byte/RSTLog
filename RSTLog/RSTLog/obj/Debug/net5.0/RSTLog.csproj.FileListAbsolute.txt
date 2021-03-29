@@ -662,3 +662,5 @@ C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\CustomUnauthori
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\ServerError.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\build-gz\ZJ1aENJ1.gz
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\build-gz\z9TEPvnD.gz
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\CreateCustomer.razor.g.cs
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\CreateCustomer.razor.g.cs

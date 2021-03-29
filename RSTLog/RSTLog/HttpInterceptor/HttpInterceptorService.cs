@@ -42,6 +42,9 @@ namespace RSTLog.HttpInterceptor
                         _navManager.NavigateTo("/404");
                         message = "Resource not found.";
                             break;
+                    case HttpStatusCode.BadRequest:
+                        message = "Invalid request. Please try again.";
+                        break;
                     case HttpStatusCode.Unauthorized:
                         _navManager.NavigateTo("/unauthorized");
                         message = "Unauthorized access";

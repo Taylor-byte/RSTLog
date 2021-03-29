@@ -26,6 +26,9 @@ namespace RSTLog.HttpRepository
             _navManager = navManager;
         }
 
+        public async Task CreateCustomer(Customer customer)
+            => await _client.PostAsJsonAsync("Customer", customer);
+
         public async Task<Customer> GetCustomer(int id)
         {
             var customer = await _client.GetFromJsonAsync<Customer>($"Customer/{id}");

@@ -12,5 +12,7 @@ namespace RSTLog.HttpRepository
     {
         Task<PagingResponse<Customer>> GetCustomers(RequestParams requestParams);
         Task<Customer> GetCustomer(int id);
+
+        Task CreateCustomer(Customer customer);
     }
 }
