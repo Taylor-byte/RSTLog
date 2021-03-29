@@ -34,11 +34,12 @@ namespace RSTLog.HttpRepository
 
             var queryStringParam = new Dictionary<string, string>
             {
-                ["totalCount"] = requestParams.TotalCount.ToString(),
+                //["totalCount"] = requestParams.TotalCount.ToString(),
                 ["pageNumber"] = requestParams.PageNumber.ToString(),
-                ["currentPage"] = requestParams.CurrentPage.ToString(),
+                //["currentPage"] = requestParams.CurrentPage.ToString(),
                 ["pageSize"] = requestParams.PageSize.ToString(),
-                ["searchTerm"] = requestParams.SearchTerm == null ? "" : requestParams.SearchTerm
+                ["searchTerm"] = requestParams.SearchTerm == null ? "" : requestParams.SearchTerm,
+                ["orderBy"] = requestParams.OrderBy == null ? "" : requestParams.OrderBy
 
 
             };

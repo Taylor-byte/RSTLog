@@ -648,3 +648,5 @@ C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\scopedcss\Components\PageSi
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Components\Search.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Components\Search.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\scopedcss\Components\Search.razor.rz.scp.css
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Components\Sort.razor.g.cs
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Components\Sort.razor.g.cs

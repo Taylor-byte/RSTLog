@@ -38,5 +38,7 @@ namespace RSTLog.Models
         public int TotalCount { get; set; } = maxPageSize;
 
         public string SearchTerm { get; set; }
+
+        public string OrderBy { get; set; } = "name";
     }
 }

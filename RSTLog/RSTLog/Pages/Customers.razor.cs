@@ -60,5 +60,14 @@ namespace RSTLog.Pages
 
             await GetCustomers();
         }
+
+        private async Task SortChanged(string orderBy)
+        {
+            _requestParams.OrderBy = orderBy;
+
+            await GetCustomers();
+        }
+
+
     }
 }
