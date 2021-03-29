@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.WebUtilities;
+﻿using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.WebUtilities;
 using RSTLog.Features;
 using RSTLog.Models;
 using RSTLog.Paging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Text.Json;
@@ -15,11 +17,13 @@ namespace RSTLog.HttpRepository
     public class CustomerHttpRepository : ICustomerHttpRepository
     {
         private readonly HttpClient _client;
+        private readonly NavigationManager _navManager;
         private readonly JsonSerializerOptions _options =
             new JsonSerializerOptions { PropertyNameCaseInsensitive = true,  };
-        public CustomerHttpRepository(HttpClient client)
+        public CustomerHttpRepository(HttpClient client, NavigationManager navManager)
         {
             _client = client;
+            _navManager = navManager;
         }
 
         public async Task<Customer> GetCustomer(int id)
@@ -48,11 +52,6 @@ namespace RSTLog.HttpRepository
             var response = await _client.GetAsync(QueryHelpers.AddQueryString("Customer", queryStringParam));
 
             var content = await response.Content.ReadAsStringAsync();
-
-            if(!response.IsSuccessStatusCode)
-            {
-                throw new ApplicationException(content);
-            }
 
             var pagingResponse = new PagingResponse<Customer>
             {

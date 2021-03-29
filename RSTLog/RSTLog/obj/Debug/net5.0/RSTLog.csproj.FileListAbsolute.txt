@@ -650,3 +650,15 @@ C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Components\Search.raz
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\scopedcss\Components\Search.razor.rz.scp.css
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Components\Sort.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Components\Sort.razor.g.cs
+C:\UniProjects\RSTLog\RSTLog\RSTLog\bin\Debug\net5.0\wwwroot\_framework\Microsoft.Extensions.Http.dll.gz
+C:\UniProjects\RSTLog\RSTLog\RSTLog\bin\Debug\net5.0\wwwroot\_framework\Toolbelt.Blazor.HttpClientInterceptor.dll.gz
+C:\UniProjects\RSTLog\RSTLog\RSTLog\bin\Debug\net5.0\wwwroot\_framework\Microsoft.Extensions.Http.dll
+C:\UniProjects\RSTLog\RSTLog\RSTLog\bin\Debug\net5.0\wwwroot\_framework\Toolbelt.Blazor.HttpClientInterceptor.dll
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\CustomNotFound.razor.g.cs
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\CustomUnauthorized.razor.g.cs
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\ServerError.razor.g.cs
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\CustomNotFound.razor.g.cs
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\CustomUnauthorized.razor.g.cs
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\ServerError.razor.g.cs
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\build-gz\ZJ1aENJ1.gz
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\build-gz\z9TEPvnD.gz

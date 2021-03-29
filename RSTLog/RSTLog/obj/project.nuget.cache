@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WKLAyLUsEARxU9Zbd65b+mcAYUeSvLGzcwDkK7Z9jdxOvM64gZ9GnoprdoHqFhzKx+kIWBFo/cObI2nnUFdnKw==",
+  "dgSpecHash": "arZrOKEchmjEBxGEJKHiAoD3RPtgsCIJ4RVbnBRF7MK2TAAYmpYuhKt4g/wSDgIqJ7yQi/FCuRZIejj+xWGZdQ==",
   "success": true,
   "projectFilePath": "C:\\UniProjects\\RSTLog\\RSTLog\\RSTLog\\RSTLog.csproj",
   "expectedPackageFiles": [
@@ -23,6 +23,7 @@
     "C:\\Users\\jack.KUDOS-SOFTWARE\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\5.0.0\\microsoft.extensions.fileproviders.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\jack.KUDOS-SOFTWARE\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\5.0.0\\microsoft.extensions.fileproviders.physical.5.0.0.nupkg.sha512",
     "C:\\Users\\jack.KUDOS-SOFTWARE\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\5.0.0\\microsoft.extensions.filesystemglobbing.5.0.0.nupkg.sha512",
+    "C:\\Users\\jack.KUDOS-SOFTWARE\\.nuget\\packages\\microsoft.extensions.http\\5.0.0\\microsoft.extensions.http.5.0.0.nupkg.sha512",
     "C:\\Users\\jack.KUDOS-SOFTWARE\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
     "C:\\Users\\jack.KUDOS-SOFTWARE\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\jack.KUDOS-SOFTWARE\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
@@ -34,6 +35,7 @@
     "C:\\Users\\jack.KUDOS-SOFTWARE\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512",
     "C:\\Users\\jack.KUDOS-SOFTWARE\\.nuget\\packages\\system.net.http.json\\5.0.0\\system.net.http.json.5.0.0.nupkg.sha512",
     "C:\\Users\\jack.KUDOS-SOFTWARE\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
+    "C:\\Users\\jack.KUDOS-SOFTWARE\\.nuget\\packages\\toolbelt.blazor.httpclientinterceptor\\9.2.1\\toolbelt.blazor.httpclientinterceptor.9.2.1.nupkg.sha512",
     "C:\\Users\\jack.KUDOS-SOFTWARE\\.nuget\\packages\\microsoft.netcore.app.runtime.browser-wasm\\5.0.4\\microsoft.netcore.app.runtime.browser-wasm.5.0.4.nupkg.sha512"
   ],
   "logs": []

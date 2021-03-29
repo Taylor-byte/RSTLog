@@ -7,11 +7,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using RSTLog.Features;
 using RSTLog.Paging;
-
+using RSTLog.HttpInterceptor;
 
 namespace RSTLog.Pages
 {
-    public partial class Customers
+    public partial class Customers : IDisposable
     {
         public List<Customer> CustomerList { get; set; } = new List<Customer>();
         public MetaData MetaData { get; set; } = new MetaData();
@@ -20,9 +20,12 @@ namespace RSTLog.Pages
 
         [Inject]
         public ICustomerHttpRepository CustomerRepo { get; set; }
+        [Inject]
+        public HttpInterceptorService Interceptor { get; set; }
 
         protected async override Task OnInitializedAsync()
         {
+            Interceptor.RegisterEvent();
             await GetCustomers();
 
         }
@@ -67,6 +70,8 @@ namespace RSTLog.Pages
 
             await GetCustomers();
         }
+
+        public void Dispose() => Interceptor.DisposeEvent();
 
 
     }
