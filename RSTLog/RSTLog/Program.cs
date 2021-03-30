@@ -1,3 +1,4 @@
+using Blazored.Toast;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -33,6 +34,8 @@ namespace RSTLog
                 cl.EnableIntercept(sp);
 
             });
+
+            builder.Services.AddBlazoredToast();
 
             builder.Services.AddScoped(
                 sp => sp.GetService<IHttpClientFactory>().CreateClient("WebAPI"));

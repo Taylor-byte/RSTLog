@@ -11,9 +11,9 @@ using System.Threading.Tasks;
 
 namespace RSTLog.Pages
 {
-    public partial class CreateCustomer
+    public partial class UpdateCustomer : IDisposable
     {
-        private Customer _customer = new Customer();
+        private Customer _customer;
         private EditContext _editContext;
         private bool formInvalid = true;
 
@@ -26,8 +26,12 @@ namespace RSTLog.Pages
         [Inject]
         public IToastService ToastService { get; set; }
 
-        protected override void OnInitialized()
+        [Parameter]
+        public int Id { get; set; }
+
+        protected async override Task OnInitializedAsync()
         {
+            _customer = await CustomerRepo.GetCustomer(Id);
             _editContext = new EditContext(_customer);
             _editContext.OnFieldChanged += HandleFieldChanged;
             Interceptor.RegisterEvent();
@@ -39,31 +43,24 @@ namespace RSTLog.Pages
             StateHasChanged();
         }
 
-        private async Task Create()
+        private async Task Update()
         {
-            await CustomerRepo.CreateCustomer(_customer);
+            await CustomerRepo.UpdateCustomer(_customer);
 
             ToastService.ShowSuccess($"Action successful." +
-                $"Customer \"{_customer.Name}\" successfully added.");
+                $"Customer \"{_customer.Name}\" successfully updated.");
             _customer = new Customer();
-            _editContext.OnValidationStateChanged += ValidationChanged;
-            _editContext.NotifyValidationStateChanged();
+
         }
 
-        private void ValidationChanged(object sender, ValidationStateChangedEventArgs e)
-        {
-            formInvalid = true;
-            _editContext.OnFieldChanged -= HandleFieldChanged;
-            _editContext = new EditContext(_customer);
-            _editContext.OnFieldChanged += HandleFieldChanged;
-            _editContext.OnValidationStateChanged -= ValidationChanged;
-        }
+       
 
         public void Dispose()
         {
             Interceptor.DisposeEvent();
             _editContext.OnFieldChanged -= HandleFieldChanged;
-            _editContext.OnValidationStateChanged -= ValidationChanged;
+            
         }
+
     }
 }

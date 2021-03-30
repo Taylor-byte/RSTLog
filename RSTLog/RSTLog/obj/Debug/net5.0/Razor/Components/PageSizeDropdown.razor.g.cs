@@ -79,6 +79,27 @@ using RSTLog.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 11 "C:\UniProjects\RSTLog\RSTLog\RSTLog\_Imports.razor"
+using Blazored.Toast;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 12 "C:\UniProjects\RSTLog\RSTLog\RSTLog\_Imports.razor"
+using Blazored.Toast.Services;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "C:\UniProjects\RSTLog\RSTLog\RSTLog\_Imports.razor"
+using Blazored.Toast.Configuration;
+
+#line default
+#line hidden
+#nullable disable
     public partial class PageSizeDropdown : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998

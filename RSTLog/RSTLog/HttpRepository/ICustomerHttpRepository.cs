@@ -14,5 +14,9 @@ namespace RSTLog.HttpRepository
         Task<Customer> GetCustomer(int id);
 
         Task CreateCustomer(Customer customer);
+
+        Task UpdateCustomer(Customer customer);
+
+        Task DeleteCustomer(int Id);
     }
 }

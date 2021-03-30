@@ -71,6 +71,17 @@ namespace RSTLog.Pages
             await GetCustomers();
         }
 
+        private async Task DeleteCustomer(int id)
+        {
+            await CustomerRepo.DeleteCustomer(id);
+
+            //Paging needs to be recalculated after a delete. 
+            if (_requestParams.PageNumber > 1 && CustomerList.Count == 1)
+                _requestParams.PageNumber --;
+
+            await GetCustomers();
+        }
+
         public void Dispose() => Interceptor.DisposeEvent();
 
 

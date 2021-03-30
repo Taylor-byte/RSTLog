@@ -5,6 +5,7 @@ using RSTLog.Models;
 using RSTLog.Paging;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -28,6 +29,8 @@ namespace RSTLog.HttpRepository
 
         public async Task CreateCustomer(Customer customer)
             => await _client.PostAsJsonAsync("Customer", customer);
+
+
 
         public async Task<Customer> GetCustomer(int id)
         {
@@ -66,21 +69,12 @@ namespace RSTLog.HttpRepository
             return pagingResponse;
         }
 
-        
+        public Task UpdateCustomer(Customer customer)
+            => _client.PostAsJsonAsync(Path.Combine("customers",
+                customer.Id.ToString()), customer);
 
-        //Task<IEnumerable<Customer>> ICustomerHttpRepository.GetCustomers()
-        //{
-        //    throw new NotImplementedException();
-        //}
+        public async Task DeleteCustomer(int Id)
+            => await _client.DeleteAsync(Path.Combine("customers", Id.ToString()));
 
-        //public async Task<PagedList<Customer>> GetCustomers(RequestParams requestParams)
-        //{
-        //    var customers = await _context.Customers.Tolistasync();
-
-        //    return PagedList<Customer>
-        //        .ToPagedList(customers, requestParams.PageNumber, requestParams.PageSize);
-
-
-        //}
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 using RSTLog.Models;
+using RSTLog.Shared;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,25 @@ namespace RSTLog.Components
     {
         [Parameter]
         public List<Customer> Customers { get; set; }
+
+        [Parameter]
+        public EventCallback<int> OnDelete { get; set; }
+
+        private Confirmation _confirmation;
+
+        private int _customerIdToDelete;
+
+        private void CallConfirmationModal(int Id)
+        {
+            _customerIdToDelete = Id;
+            _confirmation.Hide();
+            
+        }
+
+        private async Task DeleteCustomer()
+        {
+            _confirmation.Hide();
+            await OnDelete.InvokeAsync(_customerIdToDelete);
+        }
     }
 }

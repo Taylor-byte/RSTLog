@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace RSTLog.Pages
+namespace RSTLog.Shared
 {
     #line hidden
     using System;
@@ -103,8 +103,7 @@ using Blazored.Toast.Configuration;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/createCustomer")]
-    public partial class CreateCustomer : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class Confirmation : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)

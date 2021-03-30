@@ -20,16 +20,23 @@
                     
                 </td>
                 <td>
-                    <button type="button" class="btn btn-info">Update</button>
+                    <a class="btn btn-info" href="/updateCustomer/@customer.Id">
+                        Update
+
+                    </a>
                 </td>
                 <td>
-                    <button type="button" class="btn btn-danger">Delete</button>
+                    <button type="button" class="btn btn-danger"
+                            @onclick="() => CallConfirmationModal(customer.Id)">
+                        Delete
+                    </button>
                 </td>
             </tr>
             }
         </tbody>
-
     </table>
+    <Confirmation BodyMessage="Do you want to delete this Customer?"
+                  OnOkClicked="DeleteCustomer" @ref="_confirmation"/>
 
 }
 else
