@@ -13,6 +13,21 @@
     <div class="col-sm-3"><label>Hours Remaining</label></div>
     <div class="col-sm-6"><span>@Customer.HoursRemaining</span></div>
 </div>
+
+
+<div class="row">
+    <div class="col-sm-3"><label>RST Balance</label></div>
+    <div class="col-sm-6"><span>@Customer.Audit.Where(a => a.TransTypeId == 1 || a.TransTypeId == 2).Sum(a => a.Qty)</span></div>
+    <div class="col-sm-6"><span></span></div>
+</div>
+
+<div class="row">
+    <div class="col-sm-3"><label>Onsite Balance</label></div>
+    <!--<div class="col-sm-6"><span>@Customer.Audit.Where(a => a.TransTypeId == 3 || a.TransTypeId == 4).Sum(a => a.Qty)</span></div>-->
+    <div class="col-sm-6"><span></span></div>
+</div>
+
+
 <br />
 <div class="row">
     <div class="col">

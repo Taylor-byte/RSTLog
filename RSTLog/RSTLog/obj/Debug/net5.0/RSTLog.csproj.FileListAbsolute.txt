@@ -671,3 +671,5 @@ C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\Upda
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\UpdateCustomer.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Shared\Confirmation.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Shared\Confirmation.razor.g.cs
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Components\AuditTable.razor.g.cs
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Components\AuditTable.razor.g.cs

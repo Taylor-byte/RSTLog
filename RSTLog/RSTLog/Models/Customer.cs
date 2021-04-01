@@ -27,5 +27,7 @@ namespace RSTLog.Models
         
         public string InvoicedDate { get; set; }
 
+        public List<Audit> Audit { get; set; }
+
     }
 }

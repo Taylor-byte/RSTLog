@@ -31,5 +31,6 @@ namespace RSTLog.Shared
             StateHasChanged();
         }
 
+        //<InputDate @bind-Value="transaction.Date" class="form-control" />
     }
 }
