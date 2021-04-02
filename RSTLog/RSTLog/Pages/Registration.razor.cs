@@ -1,0 +1,44 @@
+﻿using Microsoft.AspNetCore.Components;
+using RSTLog.DTO;
+using RSTLog.HttpRepository;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace RSTLog.Pages
+{
+    public partial class Registration
+    {
+
+        private UserForRegistrationDTO _userForRegistration = new UserForRegistrationDTO();
+
+        [Inject]
+        public IAuthenticationService AuthenticationService { get; set; }
+
+        [Inject]
+        public NavigationManager NavigationManager { get; set; }
+
+        public bool ShowRegistrationErrors { get; set; }
+
+        public IEnumerable<string> Errors { get; set; }
+
+        public async Task Register()
+        {
+            ShowRegistrationErrors = false;
+
+            var result = await AuthenticationService.RegisterUser(_userForRegistration);
+
+            if (!result.IsSuccessfulRegistration)
+            {
+                Errors = result.Errors;
+                ShowRegistrationErrors = true;
+            }
+            else
+            {
+                NavigationManager.NavigateTo("/");
+            }
+        }
+
+    }
+}

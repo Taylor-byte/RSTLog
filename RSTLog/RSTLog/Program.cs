@@ -1,8 +1,10 @@
 using Blazored.Toast;
+using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using RSTLog.AuthProviders;
 using RSTLog.HttpInterceptor;
 using RSTLog.HttpRepository;
 using System;
@@ -44,7 +46,17 @@ namespace RSTLog
 
             builder.Services.AddScoped<ICustomerHttpRepository, CustomerHttpRepository>();
 
+            builder.Services.AddScoped<ITransTypeHttpRepository, TransTypeHttpRepository>();
+
+            builder.Services.AddScoped<IAuditHttpRepository, AuditHttpRepository>();
+
             builder.Services.AddScoped<HttpInterceptorService>();
+
+            builder.Services.AddAuthorizationCore();
+
+            builder.Services.AddScoped<AuthenticationStateProvider, TestAuthStateProvider>();
+
+            builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 
             await builder.Build().RunAsync();
         }

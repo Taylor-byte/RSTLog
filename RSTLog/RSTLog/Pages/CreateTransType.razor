@@ -1,0 +1,24 @@
+﻿@page "/createTransType"
+@using RSTLog.Components
+@using Microsoft.AspNetCore.Authorization
+
+@attribute [Authorize]
+
+
+<h4>Add A Transaction Type</h4>
+
+<EditForm EditContext="_editContext" OnValidSubmit="Create" class="card card-body bg-light mt-5">
+    <DataAnnotationsValidator />
+    <div class="form-group row">
+        <label for="name" class="col-md-5 col-form-label">Transaction Type</label>
+        <div class="col-md-10">
+            <InputText id="transType" class="form-control" @bind-Value="_transType.Trans_Type" />
+            <ValidationMessage For="@(() => _transType.Trans_Type)" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-right">
+            <button type="submit" class="btn btn-success" disabled="@formInvalid">Create</button>
+        </div>
+    </div>
+</EditForm>

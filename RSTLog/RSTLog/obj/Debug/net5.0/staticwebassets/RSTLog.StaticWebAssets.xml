@@ -2,4 +2,5 @@
   <ContentRoot BasePath="/" Path="C:\UniProjects\RSTLog\RSTLog\RSTLog\bin\Debug\net5.0\wwwroot\" />
   <ContentRoot BasePath="/" Path="C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\scopedcss\bundle\" />
   <ContentRoot BasePath="_content/Blazored.Toast" Path="C:\Users\jack.KUDOS-SOFTWARE\.nuget\packages\blazored.toast\3.1.2\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication" Path="C:\Users\jack.KUDOS-SOFTWARE\.nuget\packages\microsoft.aspnetcore.components.webassembly.authentication\5.0.4\build\..\staticwebassets\" />
 </StaticWebAssets>

@@ -103,6 +103,13 @@ using Blazored.Toast.Configuration;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 14 "C:\UniProjects\RSTLog\RSTLog\RSTLog\_Imports.razor"
+using Microsoft.AspNetCore.Authorization;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/admin")]
     public partial class Admin : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -111,66 +118,6 @@ using Blazored.Toast.Configuration;
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 23 "C:\UniProjects\RSTLog\RSTLog\RSTLog\Pages\Admin.razor"
-       
-
-    private Customer _customer = new Customer();
-    private EditContext _editContext;
-    private bool formInvalid = true;
-
-    [Inject]
-    public ICustomerHttpRepository CustomerRepo { get; set; }
-
-    [Inject]
-    public HttpInterceptorService Interceptor { get; set; }
-
-    [Inject]
-    public IToastService ToastService { get; set; }
-
-    protected override void OnInitialized()
-    {
-        _editContext = new EditContext(_customer);
-        _editContext.OnFieldChanged += HandleFieldChanged;
-        Interceptor.RegisterEvent();
-    }
-
-    private void HandleFieldChanged(object sender, FieldChangedEventArgs e)
-    {
-        formInvalid = !_editContext.Validate();
-        StateHasChanged();
-    }
-
-    private async Task Create()
-    {
-        await CustomerRepo.CreateCustomer(_customer);
-
-        ToastService.ShowSuccess($"Action successful." +
-            $"Customer \"{_customer.Name}\" successfully added.");
-        _customer = new Customer();
-        _editContext.OnValidationStateChanged += ValidationChanged;
-        _editContext.NotifyValidationStateChanged();
-    }
-
-    private void ValidationChanged(object sender, ValidationStateChangedEventArgs e)
-    {
-        formInvalid = true;
-        _editContext.OnFieldChanged -= HandleFieldChanged;
-        _editContext = new EditContext(_customer);
-        _editContext.OnFieldChanged += HandleFieldChanged;
-        _editContext.OnValidationStateChanged -= ValidationChanged;
-    }
-
-    public void Dispose()
-    {
-        Interceptor.DisposeEvent();
-        _editContext.OnFieldChanged -= HandleFieldChanged;
-        _editContext.OnValidationStateChanged -= ValidationChanged;
-    }
-
-#line default
-#line hidden
-#nullable disable
     }
 }
 #pragma warning restore 1591

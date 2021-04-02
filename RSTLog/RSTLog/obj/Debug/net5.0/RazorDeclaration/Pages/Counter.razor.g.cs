@@ -103,6 +103,27 @@ using Blazored.Toast.Configuration;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 14 "C:\UniProjects\RSTLog\RSTLog\RSTLog\_Imports.razor"
+using Microsoft.AspNetCore.Authorization;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "C:\UniProjects\RSTLog\RSTLog\RSTLog\Pages\Counter.razor"
+using RSTLog.Components;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\UniProjects\RSTLog\RSTLog\RSTLog\Pages\Counter.razor"
+using System.Security.Claims;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/counter")]
     public partial class Counter : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -112,7 +133,7 @@ using Blazored.Toast.Configuration;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 10 "C:\UniProjects\RSTLog\RSTLog\RSTLog\Pages\Counter.razor"
+#line 19 "C:\UniProjects\RSTLog\RSTLog\RSTLog\Pages\Counter.razor"
        
     private int currentCount = 0;
 

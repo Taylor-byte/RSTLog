@@ -103,6 +103,20 @@ using Blazored.Toast.Configuration;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 14 "C:\UniProjects\RSTLog\RSTLog\RSTLog\_Imports.razor"
+using Microsoft.AspNetCore.Authorization;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 1 "C:\UniProjects\RSTLog\RSTLog\RSTLog\App.razor"
+using RSTLog.Pages;
+
+#line default
+#line hidden
+#nullable disable
     public partial class App : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998

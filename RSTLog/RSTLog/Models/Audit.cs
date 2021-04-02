@@ -23,5 +23,7 @@ namespace RSTLog.Models
         public DateTime RecordDate { get; set; }
 
         public int Qty { get; set; }
+
+        public string Comments { get; set; }
     }
 }
