@@ -7,6 +7,7 @@
   "linkerEnabled": false,
   "resources": {
     "assembly": {
+      "Blazored.LocalStorage.dll": "sha256-7+FtaZd2xSysaMLC59XhYdtkNMZ15ha0lk73dxPdT5w=",
       "Blazored.Toast.dll": "sha256-SnlpX7tqR4Or48+LUVR7CMv3xLhjy1JBnmDfQCb2GwM=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-GgCkcCalx\/3h2tzZqbfi\/H5H4zwf+gA7wOIJWVGaW3Y=",
       "Microsoft.AspNetCore.Components.dll": "sha256-tjgurODETDIWCTj+df3XjjWnMRi72XZXE78H5YaTpDc=",
@@ -202,11 +203,11 @@
       "mscorlib.dll": "sha256-Fi+LybwHL\/VGD\/09OxxtYlT6exn9xVU+LdojZ9juR2c=",
       "netstandard.dll": "sha256-P8xX0ad1hKyWWbBxiXl3cYokFlDiuXwp3pqoYatH0kk=",
       "System.Private.CoreLib.dll": "sha256-2km83sNUTrumGJYdDzsN8RnJqv00vKWLCCh0UGajTB4=",
-      "RSTLog.dll": "sha256-cy0T7kWpLx7UzdimSRtmtEvu7hacJuoi777cRgA3scg="
+      "RSTLog.dll": "sha256-5BkoLLwkNsgzAsBFbZC0Z4zRzTu+jrOa0AbvExtHLRU="
     },
     "lazyAssembly": null,
     "pdb": {
-      "RSTLog.pdb": "sha256-nc5znXu0GFZfVtglYkCqVnZq6dNSG1tQH5Deu0OKAHs="
+      "RSTLog.pdb": "sha256-tAURxj3zUaa\/E+2fdJpkPjQYTNQEgmG4qLV2vjK0A\/Y="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-ibxaSjW7s3aLVssChknhzCpgMTHGu4D48Q9OLP3dfe8=",

@@ -10,6 +10,8 @@ namespace RSTLog.HttpRepository
     {
 
         Task<ResponseDTO> RegisterUser(UserForRegistrationDTO userForRegistrationDto);
+        Task<AuthResponseDTO> Login(UserForAuthenticationDTO userForAuthenticationDTO);
+        Task Logout();
 
     }
 }

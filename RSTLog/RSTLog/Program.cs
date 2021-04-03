@@ -1,3 +1,4 @@
+using Blazored.LocalStorage;
 using Blazored.Toast;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -38,6 +39,7 @@ namespace RSTLog
             });
 
             builder.Services.AddBlazoredToast();
+            builder.Services.AddBlazoredLocalStorage();
 
             builder.Services.AddScoped(
                 sp => sp.GetService<IHttpClientFactory>().CreateClient("WebAPI"));
@@ -54,7 +56,7 @@ namespace RSTLog
 
             builder.Services.AddAuthorizationCore();
 
-            builder.Services.AddScoped<AuthenticationStateProvider, TestAuthStateProvider>();
+            builder.Services.AddScoped<AuthenticationStateProvider, AuthStateProvider>();
 
             builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 

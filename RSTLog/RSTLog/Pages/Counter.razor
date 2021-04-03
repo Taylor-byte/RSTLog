@@ -2,7 +2,7 @@
 @using RSTLog.Components 
 @using System.Security.Claims
 
-<Microsoft.AspNetCore.Components.Authorization.AuthorizeView Roles="Administrator">
+<Microsoft.AspNetCore.Components.Authorization.AuthorizeView>
     <Authorized>
         The user @context.User.FindFirst(ClaimTypes.Name).Value is authorized.
     </Authorized>

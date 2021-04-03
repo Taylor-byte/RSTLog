@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "Blazored.LocalStorage/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.1.6",
+          "Microsoft.AspNetCore.Components.Web": "3.1.6"
+        },
+        "compile": {
+          "lib/netstandard2.1/Blazored.LocalStorage.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Blazored.LocalStorage.dll": {}
+        }
+      },
       "Blazored.Toast/3.1.2": {
         "type": "package",
         "dependencies": {
@@ -431,6 +444,19 @@
       }
     },
     "net5.0/browser-wasm": {
+      "Blazored.LocalStorage/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.1.6",
+          "Microsoft.AspNetCore.Components.Web": "3.1.6"
+        },
+        "compile": {
+          "lib/netstandard2.1/Blazored.LocalStorage.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Blazored.LocalStorage.dll": {}
+        }
+      },
       "Blazored.Toast/3.1.2": {
         "type": "package",
         "dependencies": {
@@ -861,6 +887,19 @@
     }
   },
   "libraries": {
+    "Blazored.LocalStorage/3.0.0": {
+      "sha512": "eXpHDvog+nRvAFsrqVKqGrpHXuyPTH8tgAremHKbteP5nNEROlItfP8Xh8pNMpTovuQ4tl3NyfQcG0rnbjQ5jw==",
+      "type": "package",
+      "path": "blazored.localstorage/3.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "blazored.localstorage.3.0.0.nupkg.sha512",
+        "blazored.localstorage.nuspec",
+        "icon.png",
+        "lib/netstandard2.1/Blazored.LocalStorage.dll"
+      ]
+    },
     "Blazored.Toast/3.1.2": {
       "sha512": "EDwxOEeqcT8vNIqn+sCYv/Maouu223UfMCuBxtlUpqPsVHql6OmhZgpo3j9GssIkGU1utKKdi4NaAoUoXDKWSQ==",
       "type": "package",
@@ -1545,6 +1584,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "Blazored.LocalStorage >= 3.0.0",
       "Blazored.Toast >= 3.1.2",
       "Microsoft.AspNetCore.Components.WebAssembly >= 5.0.2",
       "Microsoft.AspNetCore.Components.WebAssembly.Authentication >= 5.0.4",
@@ -1604,6 +1644,10 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "Blazored.LocalStorage": {
+            "target": "Package",
+            "version": "[3.0.0, )"
+          },
           "Blazored.Toast": {
             "target": "Package",
             "version": "[3.1.2, )"
