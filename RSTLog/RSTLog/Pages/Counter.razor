@@ -2,14 +2,15 @@
 @using RSTLog.Components 
 @using System.Security.Claims
 
-<Microsoft.AspNetCore.Components.Authorization.AuthorizeView>
+
+<AuthorizeView>
     <Authorized>
         The user @context.User.FindFirst(ClaimTypes.Name).Value is authorized.
     </Authorized>
     <NotAuthorized>
         User is not authorized.
     </NotAuthorized>
-</Microsoft.AspNetCore.Components.Authorization.AuthorizeView>
+</AuthorizeView>
 <h1>Counter</h1>
 
 <p>Current count: @currentCount</p>
@@ -17,10 +18,18 @@
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
 @code {
+
     private int currentCount = 0;
+
+    [CascadingParameter]
+    public Task<AuthenticationState> AuthState { get; set; }
 
     private void IncrementCount()
     {
+
+        //var authState = await AuthState;
+        //var user = authState.User;
+
         currentCount++;
     }
 }

@@ -52,6 +52,8 @@ namespace RSTLog
 
             builder.Services.AddScoped<IAuditHttpRepository, AuditHttpRepository>();
 
+            builder.Services.AddScoped<IEmployeeHttpRepository, EmployeeHttpRepository>();
+
             builder.Services.AddScoped<HttpInterceptorService>();
 
             builder.Services.AddAuthorizationCore();

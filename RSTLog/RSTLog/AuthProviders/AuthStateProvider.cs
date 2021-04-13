@@ -36,10 +36,10 @@ namespace RSTLog.AuthProviders
             return new AuthenticationState(new ClaimsPrincipal(new ClaimsIdentity(JwtParser.ParseClaimsFromJwt(token), "jwtAuthType")));
         }
 
-        public void NotifyUserAuthentication(string email)
+        public void NotifyUserAuthentication(string token)
         {
             var authenticatedUser = new ClaimsPrincipal(new ClaimsIdentity(
-                new[] { new Claim(ClaimTypes.Name, email) }, "jetAuthType"));
+                JwtParser.ParseClaimsFromJwt(token), "jwtAuthType"));
 
             var authState = Task.FromResult(new AuthenticationState(authenticatedUser));
 

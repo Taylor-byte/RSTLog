@@ -12,6 +12,10 @@ namespace RSTLog.Pages
     {
         public Customer Customer { get; set; } = new Customer();
 
+        public Audit Audit { get; set; } = new Audit();
+
+        
+
         [Inject]
         public ICustomerHttpRepository CustomerRepo { get; set; }
 
@@ -21,8 +25,11 @@ namespace RSTLog.Pages
         protected async override Task OnInitializedAsync()
         {
             Customer = await CustomerRepo.GetCustomer(CustomerId);
+
+            int balance = Customer.Audit.Where(a => a.TransTypeId == 3 || a.TransTypeId == 4).Sum(a => a.Qty);
+
         }
 
-
+        
     }
 }

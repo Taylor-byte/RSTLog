@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Net.Http.Json;
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.Net.Http.Headers;
 
 namespace RSTLog.HttpRepository
 {
@@ -43,8 +44,10 @@ namespace RSTLog.HttpRepository
             await _localStorage.SetItemAsync("authToken", result.Token);
 
             ((AuthStateProvider)_authStateProvider).NotifyUserAuthentication(
-                userForAuthenticationDto.Email);
-            
+                result.Token);
+
+            _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(
+                "bearer", result.Token);
 
             return new AuthResponseDTO { IsAuthSuccessful = true };
         }

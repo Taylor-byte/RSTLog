@@ -9,8 +9,11 @@ namespace RSTLog.HttpRepository
 {
     public interface ITransTypeHttpRepository
     {
-        //Task<TransType> GetTransType(int id);
-
+        Task<List<TransType>> GetTransTypes();
+        //Task<IEnumerable<TransType>> GetTransTypes();
         Task CreateTransType(TransType transType);
+
+        Task<TransType> GetTransType(int Id);
+
     }
 }

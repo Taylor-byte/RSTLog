@@ -423,11 +423,15 @@ C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\App.razor.
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Components\AuditTable.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Components\AuthLinks.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Components\CustomerTable.razor.g.cs
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Components\EmployeeTable.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Components\Pagination.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Components\Sort.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\Admin.razor.g.cs
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\Audits.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\Counter.razor.g.cs
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\CreateAudit.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\CreateCustomer.razor.g.cs
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\CreateEmployee.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\CreateTransType.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\CustomerDetails.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\Customers.razor.g.cs
@@ -436,6 +440,7 @@ C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\Cust
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\Index.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\Login.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\Logout.razor.g.cs
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\RecordSession.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\Registration.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\ServerError.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\UpdateCustomer.razor.g.cs
@@ -444,6 +449,7 @@ C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Shared\Sur
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\_Imports.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Components\PageSizeDropdown.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Components\Search.razor.g.cs
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\AuditDetails.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Shared\MainLayout.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Shared\NavMenu.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RSTLog.RazorComponent.output.cache
@@ -455,11 +461,15 @@ C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\App.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Components\AuditTable.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Components\AuthLinks.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Components\CustomerTable.razor.g.cs
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Components\EmployeeTable.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Components\Pagination.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Components\Sort.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\Admin.razor.g.cs
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\Audits.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\Counter.razor.g.cs
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\CreateAudit.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\CreateCustomer.razor.g.cs
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\CreateEmployee.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\CreateTransType.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\CustomerDetails.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\Customers.razor.g.cs
@@ -468,6 +478,7 @@ C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\CustomUnauthori
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\Index.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\Login.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\Logout.razor.g.cs
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\RecordSession.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\Registration.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\ServerError.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\UpdateCustomer.razor.g.cs
@@ -476,6 +487,7 @@ C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Shared\SurveyPrompt.r
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\_Imports.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Components\PageSizeDropdown.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Components\Search.razor.g.cs
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\AuditDetails.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Shared\MainLayout.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Shared\NavMenu.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\build-gz\VDFQClqb.gz
@@ -685,6 +697,7 @@ C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\staticwebassets\RSTLog.Stat
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\staticwebassets\RSTLog.StaticWebAssets.xml
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\scopedcss\Components\PageSizeDropdown.razor.rz.scp.css
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\scopedcss\Components\Search.razor.rz.scp.css
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\scopedcss\Pages\AuditDetails.razor.rz.scp.css
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\scopedcss\bundle\RSTLog.styles.css

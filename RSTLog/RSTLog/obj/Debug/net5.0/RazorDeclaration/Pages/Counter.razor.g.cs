@@ -63,49 +63,56 @@ using Microsoft.AspNetCore.Components.WebAssembly.Http;
 #nullable disable
 #nullable restore
 #line 8 "C:\UniProjects\RSTLog\RSTLog\RSTLog\_Imports.razor"
-using Microsoft.JSInterop;
+using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 9 "C:\UniProjects\RSTLog\RSTLog\RSTLog\_Imports.razor"
-using RSTLog;
+using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 10 "C:\UniProjects\RSTLog\RSTLog\RSTLog\_Imports.razor"
-using RSTLog.Shared;
+using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 11 "C:\UniProjects\RSTLog\RSTLog\RSTLog\_Imports.razor"
-using Blazored.Toast;
+using RSTLog;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 12 "C:\UniProjects\RSTLog\RSTLog\RSTLog\_Imports.razor"
-using Blazored.Toast.Services;
+using RSTLog.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 13 "C:\UniProjects\RSTLog\RSTLog\RSTLog\_Imports.razor"
-using Blazored.Toast.Configuration;
+using Blazored.Toast;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 14 "C:\UniProjects\RSTLog\RSTLog\RSTLog\_Imports.razor"
-using Microsoft.AspNetCore.Authorization;
+using Blazored.Toast.Services;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 15 "C:\UniProjects\RSTLog\RSTLog\RSTLog\_Imports.razor"
+using Blazored.Toast.Configuration;
 
 #line default
 #line hidden
@@ -133,12 +140,20 @@ using System.Security.Claims;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 19 "C:\UniProjects\RSTLog\RSTLog\RSTLog\Pages\Counter.razor"
+#line 20 "C:\UniProjects\RSTLog\RSTLog\RSTLog\Pages\Counter.razor"
        
+
     private int currentCount = 0;
+
+    [CascadingParameter]
+    public Task<AuthenticationState> AuthState { get; set; }
 
     private void IncrementCount()
     {
+
+        //var authState = await AuthState;
+        //var user = authState.User;
+
         currentCount++;
     }
 

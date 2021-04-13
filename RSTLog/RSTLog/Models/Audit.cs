@@ -25,5 +25,9 @@ namespace RSTLog.Models
         public int Qty { get; set; }
 
         public string Comments { get; set; }
+
+        // public IList<Employee> Employee { get; set; }
+        //public IEnumerable<TransType> TransType { get; set; }
+        public IList<TransType> TransType { get; set; }
     }
 }

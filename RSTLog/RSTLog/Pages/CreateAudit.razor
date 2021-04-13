@@ -1,0 +1,46 @@
+﻿@page "/addCredit"
+
+
+<h3>Create a RST Record</h3>
+
+<EditForm EditContext="_editContext" OnValidSubmit="Create" class="card card-body bg-light mt-5">
+    @*<DataAnnotationsValidator />*@
+    <div class="form-group row">
+        <label for="name" class="col-md-5 col-form-label">Transaction Type</label>
+        <div class="col-md-10">
+            <InputSelect id="transType" class="form-control" @bind-Value="TransTypeId">
+                @foreach (var ttype in TransTypesList)
+                {
+                    <option value="@ttype.Id">@ttype.Trans_Type</option>
+                }
+            </InputSelect>
+            @*<ValidationMessage For="@(() => _transType.Trans_Type)" />*@
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="name" class="col-md-5 col-form-label">Qty</label>
+        <div class="col-md-10">
+            <InputNumber id="qty" class="form-control" @bind-Value="_audit.Id" />
+            @*<ValidationMessage For="@(() => _customer.Name)" />*@
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="name" class="col-md-5 col-form-label">Comments</label>
+        <div class="col-md-10">
+            <InputText id="name" class="form-control" @bind-Value="_audit.Comments" />
+            @*<ValidationMessage For="@(() => _audit.Qty)" />*@
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="name" class="col-md-5 col-form-label">Record Date</label>
+        <div class="col-md-10">
+            <InputDate id="name" class="form-control" @bind-Value="_audit.RecordDate" type="hidden" />
+            @*<ValidationMessage For="@(() => _audit.Qty)" />*@
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-right">
+            <button type="submit" class="btn btn-success" disabled="@formInvalid">Create</button>
+        </div>
+    </div>
+</EditForm>

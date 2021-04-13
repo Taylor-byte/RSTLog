@@ -4,12 +4,12 @@
 <h3>Create a new Customer</h3>
 
 <EditForm EditContext="_editContext" OnValidSubmit="Create" class="card card-body bg-light mt-5">
-    <DataAnnotationsValidator/>
+    <DataAnnotationsValidator />
     <div class="form-group row">
         <label for="name" class="col-md-5 col-form-label">Name</label>
         <div class="col-md-10">
             <InputText id="name" class="form-control" @bind-Value="_customer.Name" />
-            <ValidationMessage For="@(() => _customer.Name)"/>
+            <ValidationMessage For="@(() => _customer.Name)" />
         </div>
     </div>
     <div class="row">
@@ -19,3 +19,8 @@
     </div>
 </EditForm>
 
+<div class="row">
+    <div class="col">
+        <a href="/customers" class="btn btn-success">Back</a>
+    </div>
+</div>

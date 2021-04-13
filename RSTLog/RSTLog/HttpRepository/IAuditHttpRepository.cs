@@ -1,4 +1,5 @@
-﻿using RSTLog.Models;
+﻿using RSTLog.Features;
+using RSTLog.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,16 @@ namespace RSTLog.HttpRepository
 {
     public interface IAuditHttpRepository
     {
-        Task<List<Audit>> GetAudits();
-       // Task<Audit> GetAudit(int id);
+        //Task<List<Audit>> GetAudits();
+
+        Task<PagingResponse<Audit>> GetAudits(RequestParams requestParams);
+
+        Task<Audit> GetAudit(int id);
+
+        Task CreateAudit(Audit audit);
+
+        //Task UpdateCustomer(Customer customer);
+
+        //Task DeleteCustomer(int Id);
     }
 }

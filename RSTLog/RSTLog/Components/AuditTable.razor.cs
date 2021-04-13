@@ -12,32 +12,15 @@ namespace RSTLog.Components
     {
 
         [Parameter]
-        public List<Audit> Audit { get; set; }
-        //[Parameter]
-       // public Customer Customer { get; set; }
+        public List<Audit> Audits { get; set; }
 
         [Parameter]
-        public TransType TransType { get; set; }
+        public List<TransType> TransType { get; set; }
 
-        //[Parameter]
-        //public EventCallback<int> OnDelete { get; set; }
+        [Parameter]
+        public int CustomerId { get; set; }
 
-       // private Confirmation _confirmation;
 
-        //private int _auditIdToDelete;
-
-        //private void CallConfirmationModal(int Id)
-        //{
-        //    _auditIdToDelete = Id;
-        //    _confirmation.Hide();
-
-        //}
-
-        //private async Task DeleteAudit()
-        //{
-        //    _confirmation.Hide();
-        //    await OnDelete.InvokeAsync(_auditIdToDelete);
-        //}
     }
 
 }

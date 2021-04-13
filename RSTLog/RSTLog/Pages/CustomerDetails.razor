@@ -23,15 +23,20 @@
 
 <div class="row">
     <div class="col-sm-3"><label>Onsite Balance</label></div>
-    <!--<div class="col-sm-6"><span>@Customer.Audit.Where(a => a.TransTypeId == 3 || a.TransTypeId == 4).Sum(a => a.Qty)</span></div>-->
+    @*<div class="col-sm-6"><span>@Customer.Audit.Where(a => a.TransTypeId == 3 || a.TransTypeId == 4).Sum(a => a.Qty)</span></div>*@
+    <div class="col-sm-6"><span></span></div>
     <div class="col-sm-6"><span></span></div>
 </div>
 
+@code{
+
+    
+}
 
 <br />
 <div class="row">
     <div class="col">
-        <a href="/audits" class="btn btn-success">Audit Table</a>
+        <a href="audit" class="btn btn-success">Audit Table</a>
     </div>
 </div>
 <div class="row">

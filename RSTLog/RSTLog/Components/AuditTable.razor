@@ -1,4 +1,4 @@
-﻿@if (Audit.Any())
+﻿@if (Audits.Any())
 {
     <table class="table">
 
@@ -8,23 +8,23 @@
                 <th scope="col">Completed</th>
                 <th scope="col">Comments</th>
                 <th scope="col">Qty</th>
+                <th scope="col">Record Details</th>
                 <th scope="col">Update</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var audit in Audit)
+            @foreach (var audit in Audits.Where(a => a.CustomerId == CustomerId))
             {
                 <tr>
                     <td>
                         <a>
-                            @TransType.Trans_Type
+                          
+                         
+                            
                         </a>
-
                     </td>
                     <td>
-                        <a>
-                            @audit.RecordDate
-                        </a>
+                        @audit.Date
                     </td>
                     <td>
                         <a>
@@ -37,15 +37,14 @@
                         </a>
                     </td>
                     <td>
-                        <a class="btn btn-info">
-                            Update
-
+                        <a href="/audit/@audit.Id">
+                            Details
                         </a>
                     </td>
                     <td>
-                        <button type="button" class="btn btn-danger">
-                            Delete
-                        </button>
+                        <a class="btn btn-info">
+                            Update
+                        </a>
                     </td>
                 </tr>
             }
@@ -57,5 +56,5 @@
 }
 else
 {
-    <span>Loading Customers...........</span>
+    <span>Loading Audit Records...........</span>
 }
