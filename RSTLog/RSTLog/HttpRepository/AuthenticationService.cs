@@ -42,6 +42,7 @@ namespace RSTLog.HttpRepository
                 return result;
 
             await _localStorage.SetItemAsync("authToken", result.Token);
+            await _localStorage.SetItemAsync("refreshToken", result.RefreshToken);
 
             ((AuthStateProvider)_authStateProvider).NotifyUserAuthentication(
                 result.Token);
@@ -55,11 +56,36 @@ namespace RSTLog.HttpRepository
         public async Task Logout()
         {
             await _localStorage.RemoveItemAsync("authToken");
+            await _localStorage.RemoveItemAsync("refreshToken");
 
             ((AuthStateProvider)_authStateProvider).NotifyUserLogout();
 
             _client.DefaultRequestHeaders.Authorization = null;
 
+        }
+
+        public async Task<string> RefreshToken()
+        {
+            var token = await _localStorage.GetItemAsync<string>("authToken");
+            var refreshToken = await _localStorage.GetItemAsync<string>("refreshToken");
+
+            var response = await _client.PostAsJsonAsync("token/refresh",
+                new RefreshTokenDTO
+                {
+                    Token = token,
+                    RefreshToken = refreshToken
+                });
+
+            var content = await response.Content.ReadAsStringAsync();
+            var result = JsonSerializer.Deserialize<AuthResponseDTO>(content, _options);
+
+            await _localStorage.SetItemAsync("authToken", result.Token);
+            await _localStorage.SetItemAsync("refreshToken", result.RefreshToken);
+
+            _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue
+                ("bearer", result.Token);
+
+            return result.Token;
         }
 
         public async Task<ResponseDTO> RegisterUser(UserForRegistrationDTO userForRegistrationDto)

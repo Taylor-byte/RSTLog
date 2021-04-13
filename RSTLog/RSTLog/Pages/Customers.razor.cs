@@ -26,6 +26,7 @@ namespace RSTLog.Pages
         protected async override Task OnInitializedAsync()
         {
             Interceptor.RegisterEvent();
+            Interceptor.RegisterBeforeSendEvent();
             await GetCustomers();
 
         }

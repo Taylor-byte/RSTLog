@@ -5,14 +5,9 @@ using System.Threading.Tasks;
 
 namespace RSTLog.DTO
 {
-    public class AuthResponseDTO
+    public class RefreshTokenDTO
     {
-        public bool IsAuthSuccessful { get; set; }
-
-        public string ErrorMessage { get; set; }
         public string Token { get; set; }
-
         public string RefreshToken { get; set; }
-
     }
 }

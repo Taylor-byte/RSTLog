@@ -62,6 +62,8 @@ namespace RSTLog
 
             builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 
+            builder.Services.AddScoped<RefreshTokenService>();
+
             await builder.Build().RunAsync();
         }
     }
