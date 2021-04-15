@@ -707,3 +707,7 @@ C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RSTLog.csproj.CopyComplete
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RSTLog.dll
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\ref\RSTLog.dll
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RSTLog.pdb
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\ForgotPassword.razor.g.cs
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\ForgotPassword.razor.g.cs
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\ResetPassword.razor.g.cs
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\ResetPassword.razor.g.cs

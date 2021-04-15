@@ -9,9 +9,13 @@
         <label for="name" class="col-md-5 col-form-label">Transaction Type</label>
         <div class="col-md-10">
             <InputSelect id="transType" class="form-control" @bind-Value="TransTypeId">
-                @foreach (var ttype in TransTypesList)
+                @if (TransTypesList != null)
                 {
-                    <option value="@ttype.Id">@ttype.Trans_Type</option>
+                    @foreach (var ttype in TransTypesList)
+                    {
+                        <option value="@ttype.Id">@ttype.Trans_Type</option>
+                    }
+
                 }
             </InputSelect>
             @*<ValidationMessage For="@(() => _transType.Trans_Type)" />*@

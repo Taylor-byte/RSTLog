@@ -71,5 +71,12 @@ namespace RSTLog.HttpRepository
 
             return pagingResponse;
         }
+
+        public async Task<List<TransType>> GetTransTypes()
+        {
+            var transTypes = await _client.GetFromJsonAsync<List<TransType>>("TransType");
+
+            return transTypes;
+        }
     }
 }

@@ -28,6 +28,6 @@ namespace RSTLog.Models
 
         // public IList<Employee> Employee { get; set; }
         //public IEnumerable<TransType> TransType { get; set; }
-        public IList<TransType> TransType { get; set; }
+        public  IList<TransType> TransType { get; set; }
     }
 }

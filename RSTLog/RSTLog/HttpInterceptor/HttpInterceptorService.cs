@@ -43,7 +43,7 @@ namespace RSTLog.HttpInterceptor
         private async Task InterceptBeforeSendAsync(object sender, HttpClientInterceptorEventArgs e)
         {
             var absolutePath = e.Request.RequestUri.AbsolutePath;
-            //does the path contain the token or account info. . If notthen refresh token.
+            //does the path contain the token or account info. . If not then refresh token.
             if (!absolutePath.Contains("token") && !absolutePath.Contains("account"))
             {
                 var token = await _refreshTokenService.TryRefreshToken();

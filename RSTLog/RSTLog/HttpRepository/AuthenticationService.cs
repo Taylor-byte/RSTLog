@@ -10,6 +10,9 @@ using System.Net.Http.Json;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Net.Http.Headers;
+using Microsoft.AspNetCore.Components;
+using System.Net;
+using System.IO;
 
 namespace RSTLog.HttpRepository
 {
@@ -21,13 +24,27 @@ namespace RSTLog.HttpRepository
             new JsonSerializerOptions { PropertyNameCaseInsensitive = true, };
         private readonly AuthenticationStateProvider _authStateProvider;
         private readonly ILocalStorageService _localStorage;
+        private readonly NavigationManager _navManager;
         public AuthenticationService(HttpClient client, 
             AuthenticationStateProvider authStateProvider,
-            ILocalStorageService localStorage)
+            ILocalStorageService localStorage,
+            NavigationManager navManager)
         {
             _client = client;
             _authStateProvider = authStateProvider;
             _localStorage = localStorage;
+            _navManager = navManager;
+        }
+
+        public async Task<HttpStatusCode> ForgotPassword(ForgotPasswordDTO forgotPasswordDTO )
+        {
+            forgotPasswordDTO.ClientURI =
+                Path.Combine(_navManager.BaseUri, "resetPassword");
+
+            var result = await _client.PostAsJsonAsync("account/forgotpassword",
+                forgotPasswordDTO);
+
+            return result.StatusCode;
         }
 
         public async Task<AuthResponseDTO> Login(UserForAuthenticationDTO userForAuthenticationDto)
@@ -103,6 +120,19 @@ namespace RSTLog.HttpRepository
             }
 
             return new ResponseDTO { IsSuccessfulRegistration = true };
+        }
+
+        public async Task<ResetPasswordResponseDTO> ResetPassword(ResetPasswordDTO resetPasswordDTO)
+        {
+            var resetResult = await _client.PostAsJsonAsync("account/resetpassword",
+                resetPasswordDTO);
+
+            var resetContent = await resetResult.Content.ReadAsStringAsync();
+
+            var result = JsonSerializer.Deserialize<ResetPasswordResponseDTO>(resetContent,
+                _options);
+
+            return result;
         }
     }
 }
