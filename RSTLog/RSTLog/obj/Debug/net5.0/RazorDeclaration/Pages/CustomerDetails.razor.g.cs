@@ -117,6 +117,20 @@ using Blazored.Toast.Configuration;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\UniProjects\RSTLog\RSTLog\RSTLog\Pages\CustomerDetails.razor"
+using RSTLog.Components;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\UniProjects\RSTLog\RSTLog\RSTLog\Pages\CustomerDetails.razor"
+using System.Net.Http.Headers;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/customer/{customerId:int}")]
     public partial class CustomerDetails : Microsoft.AspNetCore.Components.ComponentBase
     {
