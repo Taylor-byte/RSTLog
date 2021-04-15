@@ -37,10 +37,8 @@
         @*<Search OnSearchChanged="SearchChanged" />*@
     </div>
     <div class="col-md-2">
-        <a class="btn btn-success mb-1" href="/recordSession">Record Session</a>
     </div>
     <div class="col-md-2">
-        <a class="btn btn-success mb-1" href="/addCredit">Add Credit</a>
     </div>
 </div>
 <div class="row">
@@ -60,7 +58,12 @@
 <br />
 <div class="row">
     <div class="col">
-        <a href="audit" class="btn btn-success">Audit Table</a>
+        <a class="btn btn-success mb-1" href="/recordSession/@Customer.Id">Record Session</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <a class="btn btn-info mb-1" href="/addCredit/@Customer.Id">Add Credit</a>
     </div>
 </div>
 <div class="row">

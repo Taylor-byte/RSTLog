@@ -72,6 +72,13 @@ namespace RSTLog.HttpRepository
             return pagingResponse;
         }
 
+        public async Task<List<Employee>> GetEmployees()
+        {
+            var employees = await _client.GetFromJsonAsync<List<Employee>>("Employee");
+
+            return employees;
+        }
+
         public async Task<List<TransType>> GetTransTypes()
         {
             var transTypes = await _client.GetFromJsonAsync<List<TransType>>("TransType");

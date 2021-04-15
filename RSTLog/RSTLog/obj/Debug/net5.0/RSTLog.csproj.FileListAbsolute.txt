@@ -412,7 +412,6 @@ C:\UniProjects\RSTLog\RSTLog\RSTLog\bin\Debug\net5.0\wwwroot\_framework\icudt_CJ
 C:\UniProjects\RSTLog\RSTLog\RSTLog\bin\Debug\net5.0\wwwroot\_framework\icudt_EFIGS.dat
 C:\UniProjects\RSTLog\RSTLog\RSTLog\bin\Debug\net5.0\wwwroot\_framework\icudt_no_CJK.dat
 C:\UniProjects\RSTLog\RSTLog\RSTLog\bin\Debug\net5.0\wwwroot\_framework\dotnet.5.0.4.js
-C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RSTLog.csprojAssemblyReference.cache
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RSTLog.GeneratedMSBuildEditorConfig.editorconfig
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RSTLog.AssemblyInfoInputs.cache
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RSTLog.AssemblyInfo.cs
@@ -437,11 +436,13 @@ C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\Cust
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\Customers.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\CustomNotFound.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\CustomUnauthorized.razor.g.cs
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\ForgotPassword.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\Index.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\Login.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\Logout.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\RecordSession.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\Registration.razor.g.cs
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\ResetPassword.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\ServerError.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\UpdateCustomer.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Shared\Confirmation.razor.g.cs
@@ -475,11 +476,13 @@ C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\CustomerDetails
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\Customers.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\CustomNotFound.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\CustomUnauthorized.razor.g.cs
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\ForgotPassword.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\Index.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\Login.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\Logout.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\RecordSession.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\Registration.razor.g.cs
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\ResetPassword.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\ServerError.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\UpdateCustomer.razor.g.cs
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Shared\Confirmation.razor.g.cs
@@ -707,7 +710,4 @@ C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RSTLog.csproj.CopyComplete
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RSTLog.dll
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\ref\RSTLog.dll
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RSTLog.pdb
-C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\ForgotPassword.razor.g.cs
-C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\ForgotPassword.razor.g.cs
-C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\ResetPassword.razor.g.cs
-C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\ResetPassword.razor.g.cs
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RSTLog.csprojAssemblyReference.cache

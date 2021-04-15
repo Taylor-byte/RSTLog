@@ -1,4 +1,4 @@
-﻿@page "/recordSession"
+﻿@page "/recordSession/{customerId:int}"
 
 
 <h3>Record A Session</h3>
@@ -9,9 +9,12 @@
         <label for="name" class="col-md-5 col-form-label">Transaction Type</label>
         <div class="col-md-10">
             <InputSelect id="TransType" class="form-control" @bind-Value="TransTypeId">
-                @foreach (var ttype in TransTypes)
+                @if (transTypeList != null)
                 {
-                    <option value="@ttype.Id">@ttype.Trans_Type</option>
+                    @foreach (var ttype in transTypeList)
+                    {
+                        <option value="@ttype.Id">@ttype.Trans_Type</option>
+                    }
                 }
             </InputSelect>
             @*<ValidationMessage For="@(() => _transType.Trans_Type)" />*@
@@ -20,10 +23,13 @@
     <div class="form-group row">
         <label for="name" class="col-md-5 col-form-label">Employee</label>
         <div class="col-md-10">
-            <InputSelect id="TransType" class="form-control" @bind-Value="TransTypeId">
-                @foreach (var ttype in TransTypes)
+            <InputSelect id="Employee" class="form-control" @bind-Value="EmployeeId">
+                @if (employeeList != null)
                 {
-                    <option value="@ttype.Id">@ttype.Trans_Type</option>
+                    @foreach (var emp in employeeList)
+                    {
+                        <option value="@emp.Id">@emp.Name</option>
+                    }
                 }
             </InputSelect>
             @*<ValidationMessage For="@(() => _transType.Trans_Type)" />*@
@@ -56,3 +62,9 @@
         </div>
     </div>
 </EditForm>
+
+<div class="row">
+    <div class="col">
+        <a href="/customer/@Customer.Id" class="btn btn-success">Back</a>
+    </div>
+</div>

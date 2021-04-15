@@ -117,7 +117,7 @@ using Blazored.Toast.Configuration;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/recordSession")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/recordSession/{customerId:int}")]
     public partial class RecordSession : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998

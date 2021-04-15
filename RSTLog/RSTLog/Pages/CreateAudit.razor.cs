@@ -20,6 +20,8 @@ namespace RSTLog.Pages
         private bool formInvalid = true;
         private string TransTypeId { get; set; }
 
+        public Customer Customer { get; set; } = new Customer();
+
         [Inject]
         public IAuditHttpRepository AuditRepo { get; set; }
 
@@ -27,14 +29,22 @@ namespace RSTLog.Pages
         public ITransTypeHttpRepository TransTypeRepo { get; set; }
 
         [Inject]
+        public ICustomerHttpRepository CustomerRepo { get; set; }
+
+        [Inject]
         public HttpInterceptorService Interceptor { get; set; }
 
         [Inject]
         public IToastService ToastService { get; set; }
 
+        [Parameter]
+        public int CustomerId { get; set; }
+
         protected async override Task OnInitializedAsync()
         {
-            await base.OnInitializedAsync();
+            //await base.OnInitializedAsync();
+
+            Customer = await CustomerRepo.GetCustomer(CustomerId);
 
             TransTypeId = _audit.TransTypeId.ToString();
             TransTypesList = (await TransTypeRepo.GetTransTypes()).ToList();

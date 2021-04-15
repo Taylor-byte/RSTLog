@@ -15,25 +15,36 @@ namespace RSTLog.Pages
     {
 
         private Audit _audit = new Audit();
-        //private TransType _transType = new TransType();
+        private IList<TransType> transTypeList;
+        private IList<Employee> employeeList;
         private EditContext _editContext;
         private bool formInvalid = true;
+
+        public Customer Customer { get; set; } = new Customer();
+
         public string TransTypeId { get; set; }
-        private DateTime _dateTimeNow;
+        public string EmployeeId { get; set; }
 
         [Inject]
         public IAuditHttpRepository AuditRepo { get; set; }
 
         [Inject]
+        public ICustomerHttpRepository CustomerRepo { get; set; }
+
+        [Inject]
         public ITransTypeHttpRepository TransTypeRepo { get; set; }
 
-        public List<TransType> TransTypes { get; set; } = new List<TransType>();
+        [Inject]
+        public IEmployeeHttpRepository EmployeeRepo { get; set; }
 
         [Inject]
         public HttpInterceptorService Interceptor { get; set; }
 
         [Inject]
         public IToastService ToastService { get; set; }
+
+        [Parameter]
+        public int CustomerId { get; set; }
 
         protected override void OnInitialized()
         {
@@ -42,15 +53,18 @@ namespace RSTLog.Pages
             _editContext.OnFieldChanged += HandleFieldChanged;
             Interceptor.RegisterEvent();
 
-
         }
 
-        protected async Task OnInitialzisedAsync()
+        protected override async Task OnInitializedAsync()
         {
+            Customer = await CustomerRepo.GetCustomer(CustomerId);
 
-
-            TransTypes = (await TransTypeRepo.GetTransTypes()).ToList();
+            transTypeList = (await TransTypeRepo.GetTransTypes()).ToList();
             TransTypeId = _audit.TransTypeId.ToString();
+
+            employeeList = (await EmployeeRepo.GetEmployees()).ToList();
+            EmployeeId = _audit.EmployeeId.ToString();
+
 
 
 
@@ -68,6 +82,7 @@ namespace RSTLog.Pages
             //            _audit.Date = DateTime.Now();
             ToastService.ShowSuccess($"Action successful." +
                 $"Audit \"{_audit.TransTypeId}\" successfully added.");
+            _audit.CustomerId = CustomerId;
             _audit = new Audit();
             _editContext.OnValidationStateChanged += ValidationChanged;
             _editContext.NotifyValidationStateChanged();

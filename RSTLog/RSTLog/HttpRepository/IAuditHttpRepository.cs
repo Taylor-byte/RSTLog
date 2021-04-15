@@ -19,6 +19,8 @@ namespace RSTLog.HttpRepository
 
         Task<List<TransType>> GetTransTypes();
 
+        Task<List<Employee>> GetEmployees();
+
         //Task UpdateCustomer(Customer customer);
 
         //Task DeleteCustomer(int Id);

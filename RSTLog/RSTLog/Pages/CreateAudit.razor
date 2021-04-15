@@ -1,4 +1,4 @@
-﻿@page "/addCredit"
+﻿@page "/addCredit/{customerId:int}"
 
 
 <h3>Create a RST Record</h3>
@@ -48,3 +48,9 @@
         </div>
     </div>
 </EditForm>
+
+<div class="row">
+    <div class="col">
+        <a href="/customer/@Customer.Id" class="btn btn-success">Back</a>
+    </div>
+</div>

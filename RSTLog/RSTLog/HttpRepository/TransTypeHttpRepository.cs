@@ -31,24 +31,6 @@ namespace RSTLog.HttpRepository
             return await _client.GetFromJsonAsync<TransType>($"TransType/{Id}");
         }
 
-        //public async Task<List<TransType>> GetTransTypes()
-        //{
-        //    var transTypes = await _client.GetFromJsonAsync<List<TransType>>("TransType");
-
-        //    return transTypes;
-        //}
-
-        //public async Task<IEnumerable<TransType>> GetTransTypes()
-        //{
-        //    var transTypes = await _client.GetFromJsonAsync<IEnumerable<TransType>>("TransType");
-
-        //    return transTypes;
-        //}
-
-        //public async Task<List<Employee>> GetEmployees()
-        //{
-
-        //}
 
         public async Task<List<TransType>> GetTransTypes()
         {

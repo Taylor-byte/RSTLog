@@ -117,7 +117,7 @@ using Blazored.Toast.Configuration;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/addCredit")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/addCredit/{customerId:int}")]
     public partial class CreateAudit : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
