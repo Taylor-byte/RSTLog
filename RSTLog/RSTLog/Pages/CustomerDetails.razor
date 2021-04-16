@@ -43,8 +43,68 @@
 </div>
 <div class="row">
     <div class="col">
-        <AuditTable Audits="AuditList"></AuditTable>
-    </div>
+            <AuditTable Audits="AuditList" CustomerId="@CustomerId"></AuditTable>
+        </div>
+    <!--@if (AuditList.Any())
+    {
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <th scope="col">Transaction Type</th>
+                    <th scope="col">Completed</th>
+                    <th scope="col">Comments</th>
+                    <th scope="col">Qty</th>
+                    <th scope="col">Record Details</th>
+                    <th scope="col">Update</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var audit in AuditList.Where(a => a.CustomerId == CustomerId))
+                {
+                    <tr>
+                        <td>
+                            <a>
+
+                            @audit.TransTypeId
+
+                            </a>
+                        </td>
+                        <td>
+                            @audit.Date
+                        </td>
+                        <td>
+                            <a>
+                                @audit.Comments
+                            </a>
+                        </td>
+                        <td>
+                            <a>
+                                @audit.Qty
+                            </a>
+                        </td>
+                        <td>
+                            <a href="/audit/@audit.Id">
+                                Details
+                            </a>
+                        </td>
+                        <td>
+                            <a class="btn btn-info">
+                                Update
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>-->
+        @*<Confirmation BodyMessage="Do you want to delete this Audit Record?"
+            OnOkClicked="DeleteAudit" @ref="_confirmation" />*@
+
+    <!--}
+    else
+    {
+        <span>Loading Audit Records...........</span>
+    }-->
 </div>
 <div class="row">
     <div class="col">

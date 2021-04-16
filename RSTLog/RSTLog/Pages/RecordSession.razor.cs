@@ -52,12 +52,14 @@ namespace RSTLog.Pages
             _editContext = new EditContext(_audit);
             _editContext.OnFieldChanged += HandleFieldChanged;
             Interceptor.RegisterEvent();
-
+            
         }
 
         protected override async Task OnInitializedAsync()
         {
             Customer = await CustomerRepo.GetCustomer(CustomerId);
+
+            _audit.CustomerId = CustomerId;
 
             transTypeList = (await TransTypeRepo.GetTransTypes()).ToList();
             TransTypeId = _audit.TransTypeId.ToString();
@@ -65,7 +67,7 @@ namespace RSTLog.Pages
             employeeList = (await EmployeeRepo.GetEmployees()).ToList();
             EmployeeId = _audit.EmployeeId.ToString();
 
-
+            
 
 
         }
@@ -82,7 +84,7 @@ namespace RSTLog.Pages
             //            _audit.Date = DateTime.Now();
             ToastService.ShowSuccess($"Action successful." +
                 $"Audit \"{_audit.TransTypeId}\" successfully added.");
-            _audit.CustomerId = CustomerId;
+            
             _audit = new Audit();
             _editContext.OnValidationStateChanged += ValidationChanged;
             _editContext.NotifyValidationStateChanged();

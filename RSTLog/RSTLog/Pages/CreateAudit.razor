@@ -1,9 +1,15 @@
 ﻿@page "/addCredit/{customerId:int}"
 
 
-<h3>Create a RST Record</h3>
+<h3>Create an RST Record</h3>
 
 <EditForm EditContext="_editContext" OnValidSubmit="Create" class="card card-body bg-light mt-5">
+    <div class="form-group row">
+        <div class="col-md-10">
+            <InputNumber id="id" @bind-Value="_audit.CustomerId" />
+            @*<ValidationMessage For="@(() => _customer.Name)" />*@
+        </div>
+    </div>
     @*<DataAnnotationsValidator />*@
     <div class="form-group row">
         <label for="name" class="col-md-5 col-form-label">Transaction Type</label>
