@@ -6,7 +6,7 @@
 <EditForm EditContext="_editContext" OnValidSubmit="Create" class="card card-body bg-light mt-5">
     <div class="form-group row">
         <div class="col-md-10">
-            <InputNumber id="id" @bind-Value="_audit.CustomerId" />
+            <InputNumber id="id" @bind-Value="CustomerId" />
             @*<ValidationMessage For="@(() => _customer.Name)" />*@
         </div>
     </div>
@@ -14,15 +14,15 @@
     <div class="form-group row">
         <label for="name" class="col-md-5 col-form-label">Transaction Type</label>
         <div class="col-md-10">
-            <InputSelect id="transType" class="form-control" @bind-Value="TransTypeId">
+            <InputSelect id="transType" class="form-control" @bind-Value="@_audit.TransTypeId" >
                 @if (TransTypesList != null)
-                {
+                 {
                     @foreach (var ttype in TransTypesList)
-                    {
+                     {
                         <option value="@ttype.Id">@ttype.Trans_Type</option>
-                    }
+                     }
 
-                }
+                 }
             </InputSelect>
             @*<ValidationMessage For="@(() => _transType.Trans_Type)" />*@
         </div>
@@ -30,7 +30,7 @@
     <div class="form-group row">
         <label for="name" class="col-md-5 col-form-label">Qty</label>
         <div class="col-md-10">
-            <InputNumber id="qty" class="form-control" @bind-Value="_audit.Id" />
+            <InputNumber id="qty" class="form-control" @bind-Value="_audit.Qty" />
             @*<ValidationMessage For="@(() => _customer.Name)" />*@
         </div>
     </div>

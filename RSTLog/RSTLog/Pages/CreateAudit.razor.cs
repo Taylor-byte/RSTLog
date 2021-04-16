@@ -18,7 +18,7 @@ namespace RSTLog.Pages
         private IList<TransType> TransTypesList;
         private EditContext _editContext;
         private bool formInvalid = true;
-        private string TransTypeId { get; set; }
+        //private string TransTypeId { get; set; }
 
         public Customer Customer { get; set; } = new Customer();
 
@@ -45,8 +45,11 @@ namespace RSTLog.Pages
             //await base.OnInitializedAsync();
 
             Customer = await CustomerRepo.GetCustomer(CustomerId);
+            _audit.CustomerId = CustomerId;
 
-            TransTypeId = _audit.TransTypeId.ToString();
+            //_audit.TransTypeId = 3;
+
+            //TransTypeId = _audit.TransTypeId.ToString();
             TransTypesList = (await TransTypeRepo.GetTransTypes()).ToList();
         }
 
