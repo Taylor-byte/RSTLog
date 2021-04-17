@@ -14,7 +14,7 @@
     <div class="form-group row">
         <label for="name" class="col-md-5 col-form-label">Transaction Type</label>
         <div class="col-md-10">
-            <InputSelect id="transType" class="form-control" @bind-Value="@_audit.TransTypeId" >
+            <InputSelect id="transType" class="form-control" @bind-Value="_audit.TransTypeId" >
                 @if (TransTypesList != null)
                  {
                     @foreach (var ttype in TransTypesList)

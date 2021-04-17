@@ -37,8 +37,8 @@ namespace RSTLog.Pages
         {
             Customer = await CustomerRepo.GetCustomer(CustomerId);
 
-            int balance = Customer.Audit.Where(a => a.TransTypeId == 3 || a.TransTypeId == 4).Sum(a => a.Qty);
-            Console.WriteLine("Customer Balance: " + balance.ToString());
+            Customer.RSTBalance = Customer.Audit.Where(a => a.TransTypeId == 1 || a.TransTypeId == 2).Sum(a => a.Qty);
+            Customer.OnsiteBalance = Customer.Audit.Where(a => a.TransTypeId == 3 || a.TransTypeId == 4).Sum(a => a.Qty);
 
             await GetAudits();
         }

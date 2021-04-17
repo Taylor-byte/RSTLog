@@ -27,6 +27,10 @@ namespace RSTLog.Models
         
         public string InvoicedDate { get; set; }
 
+        public int OnsiteBalance { get; set; }
+
+        public int RSTBalance { get; set; }
+
         public List<Audit> Audit { get; set; }
 
     }

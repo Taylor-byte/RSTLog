@@ -45,11 +45,6 @@ namespace RSTLog.Pages
             //await base.OnInitializedAsync();
 
             Customer = await CustomerRepo.GetCustomer(CustomerId);
-            _audit.CustomerId = CustomerId;
-
-            //_audit.TransTypeId = 3;
-
-            //TransTypeId = _audit.TransTypeId.ToString();
             TransTypesList = (await TransTypeRepo.GetTransTypes()).ToList();
         }
 
@@ -57,7 +52,18 @@ namespace RSTLog.Pages
         {
             base.OnInitialized();
 
+            // initiallise the _audit object
+            _audit.Date = DateTime.Now;
             _audit.RecordDate = DateTime.Now;
+
+            // TransTypeId 1 - 4 (not 0 - 3)!!!
+            _audit.TransTypeId = 1;
+            _audit.CustomerId = CustomerId;
+            _audit.Qty = 1;
+            //_audit.EmployeeId = ;
+            //_audit.ApiUserId = ;
+
+
             _editContext = new EditContext(_audit);
             _editContext.OnFieldChanged += HandleFieldChanged;
             Interceptor.RegisterEvent();
@@ -71,6 +77,9 @@ namespace RSTLog.Pages
 
         private async Task Create()
         {
+            // Refresh date so it is set to the actual save time
+            _audit.Date = DateTime.Now;
+
             await AuditRepo.CreateAudit(_audit);
             //_audit.Date = DateTime.Now();
             ToastService.ShowSuccess($"Action successful." +
