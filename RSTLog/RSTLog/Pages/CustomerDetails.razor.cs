@@ -17,9 +17,13 @@ namespace RSTLog.Pages
         public List<Audit> AuditList { get; set; } = new List<Audit>();
         public List<TransType> TransTypeList { get; set; } = new List<TransType>();
 
+        public TransType TransType { get; set; } = new TransType();
+
         public MetaData MetaData { get; set; } = new MetaData();
 
         private RequestParams _requestParams = new RequestParams();
+
+        private bool IsDisabled { get; set; }
 
         [Inject]
         public IAuditHttpRepository AuditRepo { get; set; }
@@ -40,8 +44,23 @@ namespace RSTLog.Pages
             Customer.RSTBalance = Customer.Audit.Where(a => a.TransTypeId == 1 || a.TransTypeId == 2).Sum(a => a.Qty);
             Customer.OnsiteBalance = Customer.Audit.Where(a => a.TransTypeId == 3 || a.TransTypeId == 4).Sum(a => a.Qty);
 
+
+
             await GetAudits();
         }
+
+        protected override void OnInitialized()
+        {
+            if (Customer.RSTBalance > 0 | Customer.OnsiteBalance > 0)
+            {
+                IsDisabled = false;
+            }
+            else
+            {
+                IsDisabled = true;
+            }
+
+    }
 
         private async Task SelectedPage(int page)
         {

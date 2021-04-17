@@ -15,7 +15,8 @@ namespace RSTLog.Pages
     {
 
         private Audit _audit = new Audit();
-        private IList<TransType> TransTypesList;
+        private IList<TransType> transTypesList;
+        private IEnumerable<TransType> addCreditList;
         private EditContext _editContext;
         private bool formInvalid = true;
         //private string TransTypeId { get; set; }
@@ -45,7 +46,9 @@ namespace RSTLog.Pages
             //await base.OnInitializedAsync();
 
             Customer = await CustomerRepo.GetCustomer(CustomerId);
-            TransTypesList = (await TransTypeRepo.GetTransTypes()).ToList();
+            transTypesList = (await TransTypeRepo.GetTransTypes()).ToList();
+
+            addCreditList = transTypesList.Where(x => x.Trans_Type == "RST Purchased" || x.Trans_Type == "Onsite Purchased");
         }
 
         protected override void OnInitialized()

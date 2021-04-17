@@ -16,6 +16,7 @@ namespace RSTLog.Pages
 
         private Audit _audit = new Audit();
         private IList<TransType> transTypeList;
+        private IEnumerable<TransType> recordSessionList;
         private IList<Employee> employeeList;
         private EditContext _editContext;
         private bool formInvalid = true;
@@ -46,31 +47,49 @@ namespace RSTLog.Pages
         [Parameter]
         public int CustomerId { get; set; }
 
+
+        protected override async Task OnInitializedAsync()
+        {
+            Customer = await CustomerRepo.GetCustomer(CustomerId);
+
+
+            transTypeList = (await TransTypeRepo.GetTransTypes()).ToList();
+
+            recordSessionList = transTypeList.Where(x => x.Trans_Type == "RST Used" || x.Trans_Type == "Onsite Used");
+
+            employeeList = (await EmployeeRepo.GetEmployees()).ToList();
+            //EmployeeId = _audit.EmployeeId.ToString();
+
+
+
+
+        }
+
         protected override void OnInitialized()
         {
+
+            base.OnInitialized();
+
+            // initiallise the _audit object
             _audit.Date = DateTime.Now;
+            _audit.RecordDate = DateTime.Now;
+
+            // TransTypeId 1 - 4 (not 0 - 3)!!!
+            _audit.TransTypeId = 2;
+            _audit.CustomerId = CustomerId;
+            _audit.Qty = 1;
+            _audit.EmployeeId = 1;
+            //_audit.ApiUserId = ;
+
+
+
             _editContext = new EditContext(_audit);
             _editContext.OnFieldChanged += HandleFieldChanged;
             Interceptor.RegisterEvent();
             
         }
 
-        protected override async Task OnInitializedAsync()
-        {
-            Customer = await CustomerRepo.GetCustomer(CustomerId);
 
-            _audit.CustomerId = CustomerId;
-
-            transTypeList = (await TransTypeRepo.GetTransTypes()).ToList();
-            TransTypeId = _audit.TransTypeId.ToString();
-
-            employeeList = (await EmployeeRepo.GetEmployees()).ToList();
-            EmployeeId = _audit.EmployeeId.ToString();
-
-            
-
-
-        }
 
         private void HandleFieldChanged(object sender, FieldChangedEventArgs e)
         {
@@ -80,8 +99,10 @@ namespace RSTLog.Pages
 
         private async Task Create()
         {
+            _audit.Qty *= -1;
+            _audit.Date = DateTime.Now;
             await AuditRepo.CreateAudit(_audit);
-            //            _audit.Date = DateTime.Now();
+            
             ToastService.ShowSuccess($"Action successful." +
                 $"Audit \"{_audit.TransTypeId}\" successfully added.");
             

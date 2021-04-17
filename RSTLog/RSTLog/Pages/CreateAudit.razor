@@ -14,15 +14,15 @@
     <div class="form-group row">
         <label for="name" class="col-md-5 col-form-label">Transaction Type</label>
         <div class="col-md-10">
-            <InputSelect id="transType" class="form-control" @bind-Value="_audit.TransTypeId" >
-                @if (TransTypesList != null)
-                 {
-                    @foreach (var ttype in TransTypesList)
-                     {
+            <InputSelect id="transType" class="form-control" @bind-Value="_audit.TransTypeId">
+                @if (addCreditList != null)
+                {
+                    @foreach (var ttype in addCreditList)
+                    {
                         <option value="@ttype.Id">@ttype.Trans_Type</option>
-                     }
+                    }
 
-                 }
+                }
             </InputSelect>
             @*<ValidationMessage For="@(() => _transType.Trans_Type)" />*@
         </div>

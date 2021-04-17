@@ -4,14 +4,20 @@
 <h3>Record A Session</h3>
 
 <EditForm EditContext="_editContext" OnValidSubmit="Create" class="card card-body bg-light mt-5">
+    <div class="form-group row">
+        <div class="col-md-10">
+            <InputNumber id="id" @bind-Value="CustomerId" />
+            @*<ValidationMessage For="@(() => _customer.Name)" />*@
+        </div>
+    </div>
     @*<DataAnnotationsValidator />*@
     <div class="form-group row">
         <label for="name" class="col-md-5 col-form-label">Transaction Type</label>
         <div class="col-md-10">
-            <InputSelect id="TransType" class="form-control" @bind-Value="TransTypeId">
-                @if (transTypeList != null)
+            <InputSelect id="TransType" class="form-control" @bind-Value="_audit.TransTypeId">
+                @if (recordSessionList != null)
                 {
-                    @foreach (var ttype in transTypeList)
+                    @foreach (var ttype in recordSessionList)
                     {
                         <option value="@ttype.Id">@ttype.Trans_Type</option>
                     }
@@ -23,11 +29,13 @@
     <div class="form-group row">
         <label for="name" class="col-md-5 col-form-label">Employee</label>
         <div class="col-md-10">
-            <InputSelect id="Employee" class="form-control" @bind-Value="EmployeeId">
+            <InputSelect id="Employee" class="form-control" @bind-Value="_audit.EmployeeId">
                 @if (employeeList != null)
                 {
+
                     @foreach (var emp in employeeList)
                     {
+
                         <option value="@emp.Id">@emp.Name</option>
                     }
                 }
