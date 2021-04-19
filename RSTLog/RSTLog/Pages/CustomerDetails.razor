@@ -5,6 +5,12 @@
 
 <h3 class="mt-3">Customer Details</h3>
 
+<div class="row">
+    <div class="col-sm-3"><label>Customer Name</label></div>
+    <div class="col-sm-6"><span>@Customer.Name</span></div>
+    <div class="col-sm-6"><span></span></div>
+    <div class="col-sm-6"><span></span></div>
+</div>
 
 <div class="row">
     <div class="col-sm-3"><label>RST Balance</label></div>
@@ -44,7 +50,7 @@
                     <th scope="col">Comments</th>
                     <th scope="col">Qty</th>
                     <th scope="col">Record Details</th>
-                    <th scope="col">Update</th>
+                    <th scope="col">Record Date Stamp</th>
                 </tr>
             </thead>
             <tbody>
@@ -59,7 +65,7 @@
                             </a>
                         </td>
                         <td>
-                            @audit.Date
+                            @audit.Date.ToString("dd/MM/yyyy")
                         </td>
                         <td>
                             <a>
@@ -77,9 +83,7 @@
                             </a>
                         </td>
                         <td>
-                            <a class="btn btn-info">
-                                Update
-                            </a>
+                            @audit.RecordDate.ToString("dd/MM/yyyy")
                         </td>
                     </tr>
                 }

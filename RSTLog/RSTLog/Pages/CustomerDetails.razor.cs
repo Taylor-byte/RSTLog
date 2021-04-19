@@ -44,7 +44,7 @@ namespace RSTLog.Pages
             Customer.RSTBalance = Customer.Audit.Where(a => a.TransTypeId == 1 || a.TransTypeId == 2).Sum(a => a.Qty);
             Customer.OnsiteBalance = Customer.Audit.Where(a => a.TransTypeId == 3 || a.TransTypeId == 4).Sum(a => a.Qty);
 
-
+            
 
             await GetAudits();
         }
@@ -59,8 +59,8 @@ namespace RSTLog.Pages
             {
                 IsDisabled = true;
             }
+        }
 
-    }
 
         private async Task SelectedPage(int page)
         {
