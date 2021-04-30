@@ -25,6 +25,8 @@ namespace RSTLog.Pages
 
         private bool IsDisabled { get; set; }
 
+        
+
         [Inject]
         public IAuditHttpRepository AuditRepo { get; set; }
 
@@ -51,7 +53,7 @@ namespace RSTLog.Pages
 
         protected override void OnInitialized()
         {
-            if (Customer.RSTBalance > 0 | Customer.OnsiteBalance > 0)
+            if (Customer.RSTBalance > 0)
             {
                 IsDisabled = false;
             }

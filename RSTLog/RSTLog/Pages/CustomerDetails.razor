@@ -60,7 +60,7 @@
                         <td>
                             <a>
 
-                            @audit.
+                            
 
                             </a>
                         </td>
@@ -110,12 +110,14 @@
 <br />
 <div class="row">
     <div class="col">
-        <a class="btn btn-success mb-1" href="/recordSession/@Customer.Id" disabled="@IsDisabled">Record Session</a>
+        <a class="btn btn-success mb-1" href="/recordSession/@Customer.Id">Record Session</a>
+        @*<button class="btn btn-success mb-1" href="/recordSession/@Customer.Id" disabled="@IsDisabled">Record Session</button>*@
     </div>
 </div>
 <div class="row">
     <div class="col">
         <a class="btn btn-info mb-1" href="/addCredit/@Customer.Id">Add Credit</a>
+        @*<button class="btn btn-info mb-1"><a href="/addCredit/@Customer.Id"></a>Add Credit</button>*@
     </div>
 </div>
 <div class="row">

@@ -124,6 +124,13 @@ using Microsoft.AspNetCore.Authorization;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 6 "C:\UniProjects\RSTLog\RSTLog\RSTLog\Pages\CreateTransType.razor"
+           [Authorize(Roles = "Administrator")]
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/createTransType")]
     public partial class CreateTransType : Microsoft.AspNetCore.Components.ComponentBase
     {

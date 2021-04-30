@@ -6,7 +6,7 @@
 <EditForm EditContext="_editContext" OnValidSubmit="Create" class="card card-body bg-light mt-5">
     <div class="form-group row">
         <div class="col-md-10">
-            <InputNumber id="id" @bind-Value="CustomerId" />
+            <InputNumber id="id" @bind-Value="CustomerId" hidden="hidden" />
             @*<ValidationMessage For="@(() => _customer.Name)" />*@
         </div>
     </div>
@@ -46,7 +46,7 @@
     <div class="form-group row">
         <label for="name" class="col-md-5 col-form-label">Qty</label>
         <div class="col-md-10">
-            <InputNumber id="qty" class="form-control" @bind-Value="_audit.Qty" />
+            <InputNumber id="qty" class="form-control" min="0" @bind-Value="_audit.Qty" />
             @*<ValidationMessage For="@(() => _customer.Name)" />*@
         </div>
     </div>

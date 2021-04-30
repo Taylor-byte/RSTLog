@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="RSTLog.AuthProviders.AuthStateProvider">
+    <Position X="3.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACEAAAAAAIAAAAABAAAAAAAAAAAABAAAAABAAAAAA=</HashCode>
+      <FileName>AuthProviders\AuthStateProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.AuthProviders.TestAuthStateProvider">
+    <Position X="3.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>AuthProviders\TestAuthStateProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.Components.AuditTable">
+    <Position X="15.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAABBAAAAAAAAAAAAA=</HashCode>
+      <FileName>Components\AuditTable.razor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.Components.CustomerTable">
+    <Position X="7" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAgAAAAAJAAAAAAAAAAAAAAAAAAgAAAAAQA=</HashCode>
+      <FileName>Components\CustomerTable.razor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.Components.EmployeeTable">
+    <Position X="15.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAABIAAAAAAACAAAAAAAAAAgAAAAAQA=</HashCode>
+      <FileName>Components\EmployeeTable.razor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.Components.PageSizeDropdown">
+    <Position X="7" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Components\PageSizeDropdown.razor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.Components.Pagination">
+    <Position X="5.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAABAAAAAAQAAAAAMAAACAAAAACAAA=</HashCode>
+      <FileName>Components\Pagination.razor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.Components.Search">
+    <Position X="17.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAgAAAAAAAAAAAgAJAAAAAAAAAAA=</HashCode>
+      <FileName>Components\Search.razor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.Components.Sort">
+    <Position X="23.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Components\Sort.razor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.Configuration.JwtConfiguration">
+    <Position X="23.25" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAACAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Configuration\JwtConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.DTO.AuthResponseDTO">
+    <Position X="23.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QQAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>DTO\AuthResponseDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.DTO.ForgotPasswordDTO">
+    <Position X="23.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DTO\ForgotPasswordDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.DTO.RefreshTokenDTO">
+    <Position X="17.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>DTO\RefreshTokenDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.DTO.ResetPasswordDTO">
+    <Position X="10.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAACAAAAAAABIAA=</HashCode>
+      <FileName>DTO\ResetPasswordDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.DTO.ResetPasswordResponseDTO">
+    <Position X="15.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DTO\ResetPasswordResponseDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.DTO.ResponseDTO">
+    <Position X="17.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DTO\ResponseDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.DTO.UserForAuthenticationDTO">
+    <Position X="14" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>DTO\UserForAuthenticationDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.DTO.UserForRegistrationDTO">
+    <Position X="17.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAACAAAAAAAAIAA=</HashCode>
+      <FileName>DTO\UserForRegistrationDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.Features.JwtParser">
+    <Position X="10.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAQAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Features\JwtParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.Features.PagingLink">
+    <Position X="7" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAIAAAAAAAAAAAAAAAAAgAAAACAAAAAA=</HashCode>
+      <FileName>Features\PagingLink.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.Features.PagingResponse&lt;T&gt;">
+    <Position X="12.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Features\PagingResponse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.HttpInterceptor.HttpInterceptorService">
+    <Position X="1.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAACgAAAAAAAEIAAAAAAIAAAAAACAAAAAAAQE=</HashCode>
+      <FileName>HttpInterceptor\HttpInterceptorService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.HttpInterceptor.HttpResponseException">
+    <Position X="8.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HttpInterceptor\HttpResponseException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.HttpRepository.AuditHttpRepository" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAgEAAAAAAAIAAAACAgAAAAAAAAAAAAQA=</HashCode>
+      <FileName>HttpRepository\AuditHttpRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="RSTLog.HttpRepository.AuthenticationService" BaseTypeListCollapsed="true">
+    <Position X="19.25" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAEBAABQQAAAEAAAAAAAAIAAAAAAAAAAAEQAAAAAQA=</HashCode>
+      <FileName>HttpRepository\AuthenticationService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="RSTLog.HttpRepository.CustomerHttpRepository" BaseTypeListCollapsed="true">
+    <Position X="1.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAQAAAEAABAAAAAAAAAAAAAAAAAAAAAABAQA=</HashCode>
+      <FileName>HttpRepository\CustomerHttpRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="RSTLog.HttpRepository.EmployeeHttpRepository" BaseTypeListCollapsed="true">
+    <Position X="14" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAgECABAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>HttpRepository\EmployeeHttpRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="RSTLog.HttpRepository.RefreshTokenService">
+    <Position X="23.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAQAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HttpRepository\RefreshTokenService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.HttpRepository.TransTypeHttpRepository" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEBAAAQAAAAAAACAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>HttpRepository\TransTypeHttpRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="RSTLog.Models.Audit">
+    <Position X="7" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAQAAAAAAAAAAAAAEAAAAiAAABBCBAAAAAAACIAA=</HashCode>
+      <FileName>Models\Audit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.Models.Customer">
+    <Position X="21.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiAAAAAJAgQAAAAAAAAAYAAAAAQAAEAAgIAAAAAAA=</HashCode>
+      <FileName>Models\Customer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.Models.Employee">
+    <Position X="12.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.Models.MetaData">
+    <Position X="19.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAABAAAAAAAAAAAAAAQAAAAAAAAFAAAAAI=</HashCode>
+      <FileName>Models\MetaData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.Models.RequestParams">
+    <Position X="3.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QICAAAAAAAAABAAAAAAAAAAAAAQAAAAIAAAAEAAAAAI=</HashCode>
+      <FileName>Models\RequestParams.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.Models.TransType">
+    <Position X="15.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Models\TransType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.Pages.Admin">
+    <Position X="3.5" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\Admin.razor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.Pages.AuditDetails">
+    <Position X="8.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAIAAAAAAAAAAAAgAAAAAABACAAAAAAAQAAA=</HashCode>
+      <FileName>Pages\AuditDetails.razor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.Pages.Audits">
+    <Position X="14" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAQAAAAgkACAIABAIASAAA=</HashCode>
+      <FileName>Pages\Audits.razor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.Pages.CreateAudit">
+    <Position X="8.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAIAAACAAgAIAQAAAAAAEAGAAAFACCAABABIQACA=</HashCode>
+      <FileName>Pages\CreateAudit.razor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.Pages.CreateCustomer">
+    <Position X="12.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAACAAgIIAAAAAAAAEACAAAEAACAAAABAAACA=</HashCode>
+      <FileName>Pages\CreateCustomer.razor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.Pages.CreateEmployee">
+    <Position X="12.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAIACBBgAIAAAAAAAAEACAAAEACCAAAABAAAAA=</HashCode>
+      <FileName>Pages\CreateEmployee.razor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.Pages.CreateTransType">
+    <Position X="17.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAACAAgAIAAAAAAAAEACAAAEAACAABABAAAAE=</HashCode>
+      <FileName>Pages\CreateTransType.razor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.Pages.CustomerDetails">
+    <Position X="21.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAGAAAAAAIAAAAAAAAAAAAAQAAAAhFECCIABAIASACA=</HashCode>
+      <FileName>Pages\CustomerDetails.razor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.Pages.Customers" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAABAAQAAAUAAAACkACAAAAAIADACA=</HashCode>
+      <FileName>Pages\Customers.razor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="RSTLog.Pages.ForgotPassword">
+    <Position X="21.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAIQAAAACAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Pages\ForgotPassword.razor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.Pages.Login">
+    <Position X="14" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAYgAAAAAAAAAAEAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\Login.razor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.Pages.Logout">
+    <Position X="15.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIgAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\Logout.razor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.Pages.RecordSession">
+    <Position X="19.5" Y="5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAkAAIAAACBIgAIAAAAAAAAEACAAAFCCCAABABKSACA=</HashCode>
+      <FileName>Pages\RecordSession.razor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.Pages.Registration">
+    <Position X="1.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAYgAAAAAAAAAAAABAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Pages\Registration.razor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.Pages.ResetPassword">
+    <Position X="8.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAYAEAAAQAAAACAAAAAAACAAAAQAAAAA=</HashCode>
+      <FileName>Pages\ResetPassword.razor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.Pages.UpdateCustomer" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAIAAACAAgIIAAAAAAAAEACAAAAACAAAAAAAAACA=</HashCode>
+      <FileName>Pages\UpdateCustomer.razor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="RSTLog.Paging.PagedList&lt;T&gt;">
+    <Position X="23.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Paging\PagedList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.Shared.Confirmation">
+    <Position X="3.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAABEgAAAAAAAAAEAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Shared\Confirmation.razor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RSTLog.Program">
+    <Position X="14" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="RSTLog.HttpRepository.IAuditHttpRepository">
+    <Position X="1.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAIAAAACAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HttpRepository\IAuditHttpRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="RSTLog.HttpRepository.IAuthenticationService">
+    <Position X="5.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAABQAAAAAAAAAAAAAIAAAAAAAAAAAEQAAAAAAA=</HashCode>
+      <FileName>HttpRepository\IAuthenticationService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="RSTLog.HttpRepository.ICustomerHttpRepository">
+    <Position X="7" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAQAAAAAABAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>HttpRepository\ICustomerHttpRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="RSTLog.HttpRepository.IEmployeeHttpRepository">
+    <Position X="10.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAgACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HttpRepository\IEmployeeHttpRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="RSTLog.HttpRepository.ITransTypeHttpRepository">
+    <Position X="15.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAQAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HttpRepository\ITransTypeHttpRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
