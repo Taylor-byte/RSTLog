@@ -15,38 +15,39 @@
         <tbody>
             @foreach (var audit in Audits.Where(a => a.CustomerId == CustomerId))
             {
-                <tr>
-                    <td>
-                        <a>
+            <tr>
+                <td>
+
 
                         @audit.TransType.Trans_Type
 
-                        </a>
-                    </td>
-                    <td>
-                        @audit.Date
-                    </td>
-                    <td>
-                        <a>
-                            @audit.Comments
-                        </a>
-                    </td>
-                    <td>
-                        <a>
-                            @audit.Qty
-                        </a>
-                    </td>
-                    <td>
-                        <a href="/audit/@audit.Id">
-                            Details
-                        </a>
-                    </td>
-                    <td>
-                        <a class="btn btn-info">
-                            Update
-                        </a>
-                    </td>
-                </tr>
+
+                </td>
+                <td>
+                   
+                    @audit.Date
+                </td>
+                <td>
+
+                        @audit.Comments
+
+                </td>
+                <td>
+
+                        @audit.Qty
+
+                </td>
+                <td>
+                    <a href="/audit/@audit.Id">
+                        Details
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-info">
+                        Update
+                    </a>
+                </td>
+            </tr>
             }
         </tbody>
     </table>

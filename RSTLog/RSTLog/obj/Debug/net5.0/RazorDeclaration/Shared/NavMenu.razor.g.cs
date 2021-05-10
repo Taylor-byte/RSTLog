@@ -125,7 +125,7 @@ using Blazored.Toast.Configuration;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 46 "C:\UniProjects\RSTLog\RSTLog\RSTLog\Shared\NavMenu.razor"
+#line 50 "C:\UniProjects\RSTLog\RSTLog\RSTLog\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

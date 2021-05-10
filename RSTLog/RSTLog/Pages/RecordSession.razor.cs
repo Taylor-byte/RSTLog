@@ -99,6 +99,7 @@ namespace RSTLog.Pages
 
         private async Task Create()
         {
+            //Minus the quantity
             _audit.Qty *= -1;
             _audit.Date = DateTime.Now;
             await AuditRepo.CreateAudit(_audit);

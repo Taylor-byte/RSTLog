@@ -412,6 +412,7 @@ C:\UniProjects\RSTLog\RSTLog\RSTLog\bin\Debug\net5.0\wwwroot\_framework\icudt_CJ
 C:\UniProjects\RSTLog\RSTLog\RSTLog\bin\Debug\net5.0\wwwroot\_framework\icudt_EFIGS.dat
 C:\UniProjects\RSTLog\RSTLog\RSTLog\bin\Debug\net5.0\wwwroot\_framework\icudt_no_CJK.dat
 C:\UniProjects\RSTLog\RSTLog\RSTLog\bin\Debug\net5.0\wwwroot\_framework\dotnet.5.0.4.js
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RSTLog.csprojAssemblyReference.cache
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RSTLog.GeneratedMSBuildEditorConfig.editorconfig
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RSTLog.AssemblyInfoInputs.cache
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RSTLog.AssemblyInfo.cs
@@ -710,4 +711,3 @@ C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RSTLog.csproj.CopyComplete
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RSTLog.dll
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\ref\RSTLog.dll
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RSTLog.pdb
-C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RSTLog.csprojAssemblyReference.cache

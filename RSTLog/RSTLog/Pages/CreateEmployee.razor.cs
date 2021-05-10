@@ -45,6 +45,7 @@ namespace RSTLog.Pages
 
         private async Task GetEmployees()
         {
+            //list employees in the table
             EmployeeList = await EmployeeRepo.GetEmployees();
 
             foreach (var employee in EmployeeList)
@@ -63,8 +64,9 @@ namespace RSTLog.Pages
         {
             await EmployeeRepo.CreateEmployee(_employee);
 
+            //Toaster notifications
             ToastService.ShowSuccess($"Action successful." +
-                $"TransType \"{_employee.Name}\" successfully added.");
+                $"Employee \"{_employee.Name}\" successfully added.");
             _employee = new Employee();
             _editContext.OnValidationStateChanged += ValidationChanged;
             _editContext.NotifyValidationStateChanged();
@@ -72,6 +74,7 @@ namespace RSTLog.Pages
 
         private void ValidationChanged(object sender, ValidationStateChangedEventArgs e)
         {
+            //form validations when elements change
             formInvalid = true;
             _editContext.OnFieldChanged -= HandleFieldChanged;
             _editContext = new EditContext(_employee);

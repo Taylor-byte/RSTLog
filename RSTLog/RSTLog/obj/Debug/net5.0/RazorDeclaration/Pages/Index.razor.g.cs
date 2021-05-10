@@ -117,6 +117,13 @@ using Blazored.Toast.Configuration;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\UniProjects\RSTLog\RSTLog\RSTLog\Pages\Index.razor"
+using RSTLog.Components;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
     {

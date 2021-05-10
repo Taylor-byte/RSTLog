@@ -14,8 +14,8 @@ namespace RSTLog.Components
         [Parameter]
         public List<Audit> Audits { get; set; }
 
-        
-        public TransType TransType { get; set; }
+        //[Parameter]
+        //public TransType TransType { get; set; }
 
         [Parameter]
         public int CustomerId { get; set; }
