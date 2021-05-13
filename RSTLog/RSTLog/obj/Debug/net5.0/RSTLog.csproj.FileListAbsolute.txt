@@ -711,3 +711,8 @@ C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RSTLog.csproj.CopyComplete
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RSTLog.dll
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\ref\RSTLog.dll
 C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RSTLog.pdb
+C:\UniProjects\RSTLog\RSTLog\RSTLog\bin\Debug\net5.0\libman.json
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\UpdateEmployee.razor.g.cs
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\UpdateEmployee.razor.g.cs
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\RazorDeclaration\Pages\Employees.razor.g.cs
+C:\UniProjects\RSTLog\RSTLog\RSTLog\obj\Debug\net5.0\Razor\Pages\Employees.razor.g.cs

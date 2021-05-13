@@ -9,7 +9,7 @@ namespace RSTLog.Features
 {
     public class PagingResponse<T> where T : class
     {
-        
+        //handles the paging response from the API
         public List<T> Items { get; set; }
         
         public MetaData MetaData { get; set; }

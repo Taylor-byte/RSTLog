@@ -9,8 +9,9 @@ namespace RSTLog.HttpRepository
 {
     public interface IAuditHttpRepository
     {
-        //Task<List<Audit>> GetAudits();
 
+        
+        //Interface for http repository. Corresponding repositories implement this interface
         Task<PagingResponse<Audit>> GetAudits(RequestParams requestParams);
 
         Task<Audit> GetAudit(int id);

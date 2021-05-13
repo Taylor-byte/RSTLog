@@ -20,7 +20,7 @@ namespace RSTLog.Components
         private Confirmation _confirmation;
 
         private int _employeeIdToDelete;
-
+        //confirmation for deletion of EMployee
         private void CallConfirmationModal(int Id)
         {
             _employeeIdToDelete = Id;

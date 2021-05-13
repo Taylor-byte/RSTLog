@@ -8,9 +8,13 @@ namespace RSTLog.HttpRepository
 {
     public interface IEmployeeHttpRepository
     {
-
-        Task <List<Employee>> GetEmployees();
+        //Interface for http repository. Corresponding repositories implement this interface
+        Task<List<Employee>> GetEmployees();
         Task CreateEmployee(Employee employee);
+
+        Task<Employee> GetEmployee(int id);
+
+        Task UpdateEmployee(Employee employee);
 
         Task DeleteEmployee(int Id);
 

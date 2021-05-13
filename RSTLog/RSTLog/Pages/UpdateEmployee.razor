@@ -1,0 +1,30 @@
+﻿@page "/updateEmployee/{Id:int}"
+
+
+<h3>Update Customer</h3>
+
+@if (_employee != null)
+{
+
+
+    <EditForm EditContext="_editContext" OnValidSubmit="Update" class="card card-body bg-light mt-5">
+        <DataAnnotationsValidator />
+        <div class="form-group row">
+            <label for="name" class="col-md-5 col-form-label">Name</label>
+            <div class="col-md-10">
+                <InputText id="name" class="form-control" @bind-Value="_employee.Name" />
+                <ValidationMessage For="@(() => _employee.Name)" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-right">
+                <button type="submit" class="btn btn-success" disabled="@formInvalid">Update</button>
+            </div>
+        </div>
+    </EditForm>
+    <div class="row">
+        <div class="col">
+            <a href="/customers" class="btn btn-success">Back</a>
+        </div>
+    </div>
+}

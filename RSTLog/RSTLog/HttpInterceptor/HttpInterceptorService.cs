@@ -13,7 +13,7 @@ namespace RSTLog.HttpInterceptor
 {
     public class HttpInterceptorService
     {
-
+        //This is an interceptor service which intercepts the responses from the API, and returns custom, user friendly error messages.
         private readonly HttpClientInterceptor _interceptor;
         private readonly NavigationManager _navManager;
         private readonly IToastService _toastService;
@@ -63,7 +63,7 @@ namespace RSTLog.HttpInterceptor
             }
 
             var message = "";
-
+            //Message switch case for custom messages
             if (!e.Response.IsSuccessStatusCode)
             {
 

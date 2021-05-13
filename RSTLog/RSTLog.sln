@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "..\..\WebAPI\RSTL
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorTests", "BlazorTests\BlazorTests.csproj", "{C4C75CF7-64E9-4FAD-B81C-D06CA9D89097}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APITests", "..\..\WebAPI\RSTLog-WebAPI\APITests\APITests.csproj", "{64BF1DD0-2E45-436D-A4C4-9F4CE1C3F326}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APITests", "..\..\WebAPI\RSTLog-WebAPI\APITests\APITests.csproj", "{64BF1DD0-2E45-436D-A4C4-9F4CE1C3F326}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

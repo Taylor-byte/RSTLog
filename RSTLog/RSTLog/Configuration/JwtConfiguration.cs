@@ -7,7 +7,7 @@ namespace RSTLog.Configuration
 {
     public class JwtConfiguration
     {
-
+        //jwt fields for configuration in headers etc
         public string SecurityKey { get; set; }
 
         public string ValidIssuer { get; set; }

@@ -2,6 +2,7 @@
 using RSTLog.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Json;
@@ -11,7 +12,7 @@ namespace RSTLog.HttpRepository
 {
     public class EmployeeHttpRepository : IEmployeeHttpRepository
     {
-
+        //Http repository for handling requests to the API
         private readonly HttpClient _client;
         private readonly NavigationManager _navManager;
 
@@ -24,15 +25,17 @@ namespace RSTLog.HttpRepository
 
         public async Task CreateEmployee(Employee employee)
             => await _client.PostAsJsonAsync("Employee", employee);
+            
 
-        public Task DeleteCustomer(int Id)
-        {
-            throw new NotImplementedException();
-        }
+        public async Task DeleteEmployee(int Id)
+            => await _client.DeleteAsync(Path.Combine("employee", Id.ToString()));
+        
 
-        public Task DeleteEmployee(int Id)
+        public async Task<Employee> GetEmployee(int id)
         {
-            throw new NotImplementedException();
+            var employee = await _client.GetFromJsonAsync<Employee>($"Employee/{id}");
+
+            return employee;
         }
 
         public async Task<List<Employee>> GetEmployees()
@@ -41,5 +44,9 @@ namespace RSTLog.HttpRepository
 
             return employees;
         }
+
+        public Task UpdateEmployee(Employee employee)
+             => _client.PostAsJsonAsync(Path.Combine("customers",
+             employee.Id.ToString()), employee);
     }
 }

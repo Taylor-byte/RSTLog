@@ -9,7 +9,7 @@ namespace RSTLog.HttpRepository
 {
     public interface IAuthenticationService
     {
-
+        //Interface for http repository. Corresponding repositories implement this interface
         Task<ResponseDTO> RegisterUser(UserForRegistrationDTO userForRegistrationDto);
         Task<AuthResponseDTO> Login(UserForAuthenticationDTO userForAuthenticationDTO);
         Task Logout();

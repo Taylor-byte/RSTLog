@@ -10,6 +10,7 @@ namespace RSTLog.HttpRepository
 {
     public interface ICustomerHttpRepository
     {
+        //Interface for http repository. Corresponding repositories implement this interface
         Task<PagingResponse<Customer>> GetCustomers(RequestParams requestParams);
         Task<Customer> GetCustomer(int id);
 

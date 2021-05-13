@@ -17,6 +17,7 @@ namespace RSTLog.HttpRepository
 {
     public class CustomerHttpRepository : ICustomerHttpRepository
     {
+        //Http repository for handling requests to the API
         private readonly HttpClient _client;
         private readonly NavigationManager _navManager;
         private readonly JsonSerializerOptions _options =

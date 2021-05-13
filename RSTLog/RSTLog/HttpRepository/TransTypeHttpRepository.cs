@@ -13,7 +13,7 @@ namespace RSTLog.HttpRepository
     public class TransTypeHttpRepository : ITransTypeHttpRepository
     {
 
-
+        //Http repository for handling requests to the API
         private readonly HttpClient _client;
         private readonly NavigationManager _navManager;
 

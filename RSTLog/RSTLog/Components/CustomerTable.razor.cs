@@ -20,6 +20,7 @@ namespace RSTLog.Components
 
         private int _customerIdToDelete;
 
+        //confirmation for deletion of customer
         private void CallConfirmationModal(int Id)
         {
             _customerIdToDelete = Id;

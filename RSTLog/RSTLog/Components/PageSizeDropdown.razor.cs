@@ -11,6 +11,7 @@ namespace RSTLog.Components
         [Parameter]
         public EventCallback<int> SelectedPageSize { get; set; }
 
+        //logic for changeing page size from 10 to 20 etc
         private async Task OnPageSizeChange(ChangeEventArgs eventArgs)
         {
             await SelectedPageSize.InvokeAsync(Int32.Parse(eventArgs.Value.ToString()));

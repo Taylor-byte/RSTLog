@@ -14,7 +14,7 @@ namespace RSTLog.HttpRepository
 {
     public class AuditHttpRepository : IAuditHttpRepository
     {
-
+        //Http repository for handling requests to the API
         private readonly HttpClient _client;
         private readonly NavigationManager _navManager;
         private readonly JsonSerializerOptions _options =
@@ -42,7 +42,7 @@ namespace RSTLog.HttpRepository
 
             return audit;
         }
-
+        //Paging
         public async Task<PagingResponse<Audit>> GetAudits(RequestParams requestParams)
         {
             var queryStringParam = new Dictionary<string, string>

@@ -9,6 +9,7 @@ namespace RSTLog.HttpRepository
 {
     public interface ITransTypeHttpRepository
     {
+        //Interface for http repository. Corresponding repositories implement this interface
         Task<List<TransType>> GetTransTypes();
         //Task<IEnumerable<TransType>> GetTransTypes();
         Task CreateTransType(TransType transType);
