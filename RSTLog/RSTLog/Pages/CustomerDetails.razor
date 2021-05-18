@@ -114,12 +114,14 @@
         @*<button class="btn btn-success mb-1" href="/recordSession/@Customer.Id" disabled="@IsDisabled">Record Session</button>*@
     </div>
 </div>
-<div class="row">
-    <div class="col">
-        <a class="btn btn-info mb-1" href="/addCredit/@Customer.Id">Add Credit</a>
-        @*<button class="btn btn-info mb-1"><a href="/addCredit/@Customer.Id"></a>Add Credit</button>*@
+<AuthorizeView Roles="Administrator">
+    <div class="row">
+        <div class="col">
+            <a class="btn btn-info mb-1" href="/addCredit/@Customer.Id">Add Credit</a>
+            @*<button class="btn btn-info mb-1"><a href="/addCredit/@Customer.Id"></a>Add Credit</button>*@
+        </div>
     </div>
-</div>
+</AuthorizeView>
 <div class="row">
     <div class="col">
         <a href="/customers" class="btn btn-success">Back</a>

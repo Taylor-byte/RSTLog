@@ -5,8 +5,10 @@
         <thead>
             <tr>
                 <th scope="col">Name</th>
-                <th scope="col">Update</th>
-                <th scope="col">Delete</th>
+                <AuthorizeView Roles="Administrator">
+                    <th scope="col">Update</th>
+                </AuthorizeView>
+                    @*<th scope="col">Delete</th>*@
             </tr>
         </thead>
         <tbody>
@@ -19,17 +21,19 @@
                     </a>
                     
                 </td>
-                <td>
-                    <a class="btn btn-info" href="/updateCustomer/@customer.Id">
-                        Update
+                <AuthorizeView Roles="Administrator">
+                    <td>
+                        <a class="btn btn-info" href="/updateCustomer/@customer.Id">
+                            Update
 
-                    </a>
-                </td>
+                        </a>
+                    </td>
+                </AuthorizeView>
                 <td>
-                    <button type="button" class="btn btn-danger"
+                    @*<button type="button" class="btn btn-danger"
                             @onclick="() => CallConfirmationModal(customer.Id)">
                         Delete
-                    </button>
+                    </button>*@
                 </td>
             </tr>
             }
