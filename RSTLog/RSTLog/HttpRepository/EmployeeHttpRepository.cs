@@ -22,13 +22,14 @@ namespace RSTLog.HttpRepository
             _navManager = navManager;
         }
 
-
+        //HTTP methods for calling the API POST, PUT GET etc
         public async Task CreateEmployee(Employee employee)
             => await _client.PostAsJsonAsync("Employee", employee);
             
+        //Path.combine constructs the app url.
+        public async Task DeleteEmployee(int id)
+            => await _client.DeleteAsync(Path.Combine("Employee", id.ToString()));
 
-        public async Task DeleteEmployee(int Id)
-            => await _client.DeleteAsync(Path.Combine("employee", Id.ToString()));
         
 
         public async Task<Employee> GetEmployee(int id)
@@ -46,7 +47,7 @@ namespace RSTLog.HttpRepository
         }
 
         public Task UpdateEmployee(Employee employee)
-             => _client.PostAsJsonAsync(Path.Combine("customers",
+             => _client.PutAsJsonAsync(Path.Combine("Employee",
              employee.Id.ToString()), employee);
     }
 }

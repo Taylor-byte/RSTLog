@@ -43,7 +43,7 @@ namespace RSTLog.HttpRepository
             return audit;
         }
         //Paging
-        public async Task<PagingResponse<Audit>> GetAudits(RequestParams requestParams)
+        public async Task<PagingResponse<Audit>> GetAudits(RequestParams requestParams, int customerId)
         {
             var queryStringParam = new Dictionary<string, string>
             {
@@ -57,8 +57,9 @@ namespace RSTLog.HttpRepository
 
             };
 
+
             //$"customer?pageNumber={requestParams.PageNumber}"
-            var response = await _client.GetAsync(QueryHelpers.AddQueryString("Audit", queryStringParam));
+            var response = await _client.GetAsync(QueryHelpers.AddQueryString("Audit", queryStringParam) + "&customerId=" + customerId.ToString());
 
             var content = await response.Content.ReadAsStringAsync();
 

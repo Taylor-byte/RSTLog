@@ -16,7 +16,7 @@ namespace RSTLog.HttpRepository
 
         Task UpdateEmployee(Employee employee);
 
-        Task DeleteEmployee(int Id);
+        Task DeleteEmployee(int id);
 
     }
 }

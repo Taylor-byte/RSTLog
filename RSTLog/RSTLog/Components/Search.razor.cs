@@ -12,10 +12,10 @@ namespace RSTLog.Components
         public string SearchTerm { get; set; }
 
         private Timer _timer;
-
+        //callback from the DOM for search box changed
         [Parameter]
         public EventCallback<string> OnSearchChanged { get; set; }
-
+        //check if the text in the search box has changed
         private void SearchChanged()
         {
             if (_timer != null)

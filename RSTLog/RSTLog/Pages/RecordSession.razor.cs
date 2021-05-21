@@ -28,7 +28,7 @@ namespace RSTLog.Pages
 
         [Inject]
         public IAuditHttpRepository AuditRepo { get; set; }
-
+        // Http Repositories
         [Inject]
         public ICustomerHttpRepository CustomerRepo { get; set; }
 
@@ -37,13 +37,13 @@ namespace RSTLog.Pages
 
         [Inject]
         public IEmployeeHttpRepository EmployeeRepo { get; set; }
-
+        //interceptor for error messages
         [Inject]
         public HttpInterceptorService Interceptor { get; set; }
-
+        //Toaster confirmation pop up
         [Inject]
         public IToastService ToastService { get; set; }
-
+        //id for routing
         [Parameter]
         public int CustomerId { get; set; }
 
@@ -54,9 +54,10 @@ namespace RSTLog.Pages
 
 
             transTypeList = (await TransTypeRepo.GetTransTypes()).ToList();
-
+            //Transaction type list only displays the relevent trans types to recording a session
             recordSessionList = transTypeList.Where(x => x.Trans_Type == "RST Used" || x.Trans_Type == "Onsite Used");
 
+            
             employeeList = (await EmployeeRepo.GetEmployees()).ToList();
             //EmployeeId = _audit.EmployeeId.ToString();
 

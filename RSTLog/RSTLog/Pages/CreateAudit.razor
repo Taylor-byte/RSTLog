@@ -1,12 +1,11 @@
 ﻿@page "/addCredit/{customerId:int}"
-
-
+@*This is the add credit code. add credit button on the customer details uses this page.*@
 <h3>Create an RST Record</h3>
 
 <EditForm EditContext="_editContext" OnValidSubmit="Create" class="card card-body bg-light mt-5">
     <div class="form-group row">
         <div class="col-md-10">
-            <InputNumber id="id" @bind-Value="CustomerId" hidden="hidden"/>
+            <InputNumber id="id" @bind-Value="CustomerId" hidden="hidden" />
             @*<ValidationMessage For="@(() => _customer.Name)" />*@
         </div>
     </div>
@@ -30,7 +29,7 @@
     <div class="form-group row">
         <label for="name" class="col-md-5 col-form-label">Qty</label>
         <div class="col-md-10">
-            <InputNumber id="qty" class="form-control" min="0" @bind-Value="_audit.Qty" />
+            <InputNumber id="qty" class="form-control" min="1" @bind-Value="_audit.Qty" />
             @*<ValidationMessage For="@(() => _customer.Name)" />*@
         </div>
     </div>
@@ -42,7 +41,7 @@
         </div>
     </div>
     <div class="form-group row">
-        <label for="name" class="col-md-5 col-form-label">Record Date</label>
+        @*<label for="name" class="col-md-5 col-form-label">Record Date</label>*@
         <div class="col-md-10">
             <InputDate id="name" class="form-control" @bind-Value="_audit.RecordDate" hidden="hidden" />
             @*<ValidationMessage For="@(() => _audit.Qty)" />*@

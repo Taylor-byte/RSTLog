@@ -7,6 +7,7 @@ namespace RSTLog.DTO
 {
     public class AuthResponseDTO
     {
+        //DTO for taking the authroisation response from the API
         public bool IsAuthSuccessful { get; set; }
 
         public string ErrorMessage { get; set; }

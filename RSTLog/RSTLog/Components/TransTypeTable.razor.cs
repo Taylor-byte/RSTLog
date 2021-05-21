@@ -8,30 +8,31 @@ using System.Threading.Tasks;
 
 namespace RSTLog.Components
 {
-    public partial class CustomerTable
+    public partial class TransTypeTable
     {
+
         [Parameter]
-        public List<Customer> Customers { get; set; }
-        //callback for delete specific Id
+        public List<TransType> TransTypes { get; set; }
+
         [Parameter]
         public EventCallback<int> OnDelete { get; set; }
-
+        //conformation modal 
         private Confirmation _confirmation;
 
-        private int _customerIdToDelete;
-
-        //confirmation for deletion of customer
+        private int _employeeIdToDelete;
+        //confirmation for deletion of EMployee
         private void CallConfirmationModal(int Id)
         {
-            _customerIdToDelete = Id;
+            _employeeIdToDelete = Id;
             _confirmation.Hide();
-            
+
         }
 
-        private async Task DeleteCustomer()
+        private async Task DeleteEmployee()
         {
             _confirmation.Hide();
-            await OnDelete.InvokeAsync(_customerIdToDelete);
+            await OnDelete.InvokeAsync(_employeeIdToDelete);
         }
+
     }
 }

@@ -9,11 +9,13 @@ namespace RSTLog.Shared
     public partial class Confirmation
     {
         private string _modalDisplay;
+        //backdrop so users cant click behind
         private bool _showBackdrop;
 
         [Parameter]
         public string BodyMessage { get; set; }
 
+        //event callback for clicking Ok button on modal
         [Parameter]
         public EventCallback OnOkClicked { get; set; }
 
@@ -21,6 +23,7 @@ namespace RSTLog.Shared
         {
             _modalDisplay = "block;";
             _showBackdrop = true;
+            //rerender page
             StateHasChanged();
         }
 

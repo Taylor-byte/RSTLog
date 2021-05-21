@@ -10,6 +10,7 @@ namespace RSTLog.Pages
 {
     public partial class CustomerDetails
     {
+        //instanciate required models
         public Customer Customer { get; set; } = new Customer();
 
         public Audit Audit { get; set; } = new Audit();
@@ -25,8 +26,8 @@ namespace RSTLog.Pages
 
         private bool IsDisabled { get; set; }
 
-        
 
+        // Http Repositories
         [Inject]
         public IAuditHttpRepository AuditRepo { get; set; }
 
@@ -35,7 +36,7 @@ namespace RSTLog.Pages
 
         [Inject]
         public ICustomerHttpRepository CustomerRepo { get; set; }
-
+        //id for routing
         [Parameter]
         public int CustomerId { get; set; }
 
@@ -43,6 +44,8 @@ namespace RSTLog.Pages
         {
             Customer = await CustomerRepo.GetCustomer(CustomerId);
 
+            //calcualtion for the customers remote service ticket balances. 
+            //Calcualted on the fly based number on transaction types in the table relating to that customer
             Customer.RSTBalance = Customer.Audit.Where(a => a.TransTypeId == 1 || a.TransTypeId == 2).Sum(a => a.Qty);
             Customer.OnsiteBalance = Customer.Audit.Where(a => a.TransTypeId == 3 || a.TransTypeId == 4).Sum(a => a.Qty);
 
@@ -77,10 +80,11 @@ namespace RSTLog.Pages
 
         private async Task GetAudits()
         {
-            var pagingResponse = await AuditRepo.GetAudits(_requestParams);
+            var pagingResponse = await AuditRepo.GetAudits(_requestParams, Customer.Id);
             AuditList = pagingResponse.Items;
             MetaData = pagingResponse.MetaData;
         }
+
 
         public async Task SetPageSize(int pageSize)
         {
@@ -89,14 +93,6 @@ namespace RSTLog.Pages
 
             await GetAudits();
         }
-
-        //private async Task SearchChanged(string searchTerm)
-        //{
-        //    _requestParams.PageNumber = 1;
-        //    _requestParams.SearchTerm = searchTerm;
-
-        //    await GetAudits();
-        //}
 
 
     }

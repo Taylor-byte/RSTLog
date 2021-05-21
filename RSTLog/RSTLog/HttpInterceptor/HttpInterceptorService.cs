@@ -66,7 +66,8 @@ namespace RSTLog.HttpInterceptor
             //Message switch case for custom messages
             if (!e.Response.IsSuccessStatusCode)
             {
-
+                //Switch case for selecting the correct error to display. 
+                //default to 404 if none are matched before
                 switch (e.Response.StatusCode)
                 {
                     case HttpStatusCode.NotFound:

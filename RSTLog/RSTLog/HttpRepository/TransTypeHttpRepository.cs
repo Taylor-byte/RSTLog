@@ -23,6 +23,7 @@ namespace RSTLog.HttpRepository
             _navManager = navManager;
         }
 
+        //HTTP methods for calling the API POST, PUT, GET etc
         public async Task CreateTransType(TransType transType)
              => await _client.PostAsJsonAsync("TransType", transType);
 

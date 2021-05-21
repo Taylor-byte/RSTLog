@@ -15,22 +15,25 @@ namespace RSTLog.AuthProviders
     {
 
         private readonly HttpClient _httpClient;
+        //local storgage used to store the token
         private readonly ILocalStorageService _localStorageService;
         private readonly AuthenticationState _anonymous;
 
         public AuthStateProvider(HttpClient httpClient, ILocalStorageService localStorage)
         {
+            //inject services into constructor
             _httpClient = httpClient;
             _localStorageService = localStorage;
             _anonymous = new AuthenticationState(new ClaimsPrincipal(new ClaimsIdentity()));
         }
         public override async Task<AuthenticationState> GetAuthenticationStateAsync()
         {
+            //call the token endpoint
             var token = await _localStorageService.GetItemAsync<string>("authToken");
 
             if (string.IsNullOrWhiteSpace(token))
                 return _anonymous;
-
+            //Add token to the header
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", token);
 
             return new AuthenticationState(new ClaimsPrincipal(new ClaimsIdentity(JwtParser.ParseClaimsFromJwt(token), "jwtAuthType")));

@@ -13,6 +13,7 @@ namespace RSTLog.Pages
 {
     public partial class CreateAudit
     {
+        //This is the add credit code. add credit button on the customer details uses this logic.
 
         private Audit _audit = new Audit();
         private IList<TransType> transTypesList;
@@ -22,7 +23,7 @@ namespace RSTLog.Pages
         //private string TransTypeId { get; set; }
 
         public Customer Customer { get; set; } = new Customer();
-
+        //Http Repositores
         [Inject]
         public IAuditHttpRepository AuditRepo { get; set; }
 
@@ -47,7 +48,7 @@ namespace RSTLog.Pages
 
             Customer = await CustomerRepo.GetCustomer(CustomerId);
             transTypesList = (await TransTypeRepo.GetTransTypes()).ToList();
-
+            //Transaction type list only displays the relevent trans types to adding a credit
             addCreditList = transTypesList.Where(x => x.Trans_Type == "RST Purchased" || x.Trans_Type == "Onsite Purchased");
         }
 
@@ -72,6 +73,7 @@ namespace RSTLog.Pages
             Interceptor.RegisterEvent();
         }
 
+        //Field changes for validation
         private void HandleFieldChanged(object sender, FieldChangedEventArgs e)
         {
             formInvalid = !_editContext.Validate();

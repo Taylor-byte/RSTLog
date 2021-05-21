@@ -9,6 +9,8 @@ namespace RSTLog.AuthProviders
 {
     public class TestAuthStateProvider : AuthenticationStateProvider
     {
+
+        //This service was used to test the implimentation before commiting to the solution
         public async override Task<AuthenticationState> GetAuthenticationStateAsync()
         {
             await Task.Delay(1500);

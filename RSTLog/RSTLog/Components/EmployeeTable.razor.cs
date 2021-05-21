@@ -13,21 +13,21 @@ namespace RSTLog.Components
 
         [Parameter]
         public List<Employee> Employees { get; set; }
-
+        //callback for delete specific Id
         [Parameter]
         public EventCallback<int> OnDelete { get; set; }
-
+        //variable for confirmation modal
         private Confirmation _confirmation;
 
         private int _employeeIdToDelete;
-        //confirmation for deletion of EMployee
-        private void CallConfirmationModal(int Id)
+        //confirmation for deletion of Employee
+        private void CallConfirmationModal(int id)
         {
-            _employeeIdToDelete = Id;
-            _confirmation.Hide();
+            _employeeIdToDelete = id;
+            _confirmation.Show();
 
         }
-
+        //Delete employee with specific Id
         private async Task DeleteEmployee()
         {
             _confirmation.Hide();

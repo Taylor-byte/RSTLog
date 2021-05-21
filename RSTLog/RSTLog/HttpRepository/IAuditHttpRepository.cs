@@ -12,7 +12,7 @@ namespace RSTLog.HttpRepository
 
         
         //Interface for http repository. Corresponding repositories implement this interface
-        Task<PagingResponse<Audit>> GetAudits(RequestParams requestParams);
+        Task<PagingResponse<Audit>> GetAudits(RequestParams requestParams, int customerId);
 
         Task<Audit> GetAudit(int id);
 

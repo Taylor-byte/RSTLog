@@ -15,6 +15,7 @@ namespace RSTLog.HttpRepository
         public RefreshTokenService(AuthenticationStateProvider authStateProvider,
             IAuthenticationService authService)
         {
+            //inject authentication services into constructor
             _authStateProvider = authStateProvider;
             _authService = authService;
         }
@@ -24,6 +25,7 @@ namespace RSTLog.HttpRepository
             var authState = await _authStateProvider.GetAuthenticationStateAsync();
             var user = authState.User;
             var expClaim = user.FindFirst(c => c.Type.Equals("exp")).Value;
+            //Token expiry time variable
             var expTime = DateTimeOffset.FromUnixTimeSeconds(
                 Convert.ToInt64(expClaim));
 

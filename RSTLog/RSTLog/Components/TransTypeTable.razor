@@ -1,0 +1,40 @@
+﻿@if (TransTypes.Any())
+{
+    <table class="table">
+
+        <thead>
+            <tr>
+                <th scope="col">Transaction Type</th>
+                @*<AuthorizeView Roles="Administrator">
+                    <th scope="col">Update</th>
+                </AuthorizeView>*@
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var transType in TransTypes)
+            {
+                <tr>
+                    <td>
+                        <a>
+                            @transType.Trans_Type
+                        </a>
+
+                    </td>
+                    <AuthorizeView Roles="Administrator">
+                        <td>
+                            @*<a class="btn btn-info" href="/updateEmployee/@employee.Id">
+                                Update
+
+                            </a>*@
+                        </td>
+                    </AuthorizeView>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+}
+else
+{
+    <span>Loading Transaction Types...........</span>
+}

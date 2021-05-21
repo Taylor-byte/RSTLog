@@ -20,6 +20,7 @@ namespace RSTLog.HttpRepository
         //Http repository for handling requests to the API
         private readonly HttpClient _client;
         private readonly NavigationManager _navManager;
+        //serializer for API headers
         private readonly JsonSerializerOptions _options =
             new JsonSerializerOptions { PropertyNameCaseInsensitive = true,  };
         public CustomerHttpRepository(HttpClient client, NavigationManager navManager)
@@ -32,7 +33,7 @@ namespace RSTLog.HttpRepository
             => await _client.PostAsJsonAsync("Customer", customer);
 
 
-
+        //HTTP methods for calling the API POST, PUT, GET etc
         public async Task<Customer> GetCustomer(int id)
         {
             var customer = await _client.GetFromJsonAsync<Customer>($"Customer/{id}");
@@ -42,7 +43,7 @@ namespace RSTLog.HttpRepository
 
         public async Task<PagingResponse<Customer>> GetCustomers(RequestParams requestParams)
         {
-
+            //variable to construct the paging request Url with the required headers. 
             var queryStringParam = new Dictionary<string, string>
             {
                 //["totalCount"] = requestParams.TotalCount.ToString(),
@@ -69,13 +70,13 @@ namespace RSTLog.HttpRepository
 
             return pagingResponse;
         }
-
+        //Path.combine constructs the app url.
         public Task UpdateCustomer(Customer customer)
-            => _client.PostAsJsonAsync(Path.Combine("customers",
+            => _client.PutAsJsonAsync(Path.Combine("Customer",
                 customer.Id.ToString()), customer);
 
         public async Task DeleteCustomer(int Id)
-            => await _client.DeleteAsync(Path.Combine("customers", Id.ToString()));
+            => await _client.DeleteAsync(Path.Combine("Customer", Id.ToString()));
 
     }
 }

@@ -35,7 +35,7 @@ namespace RSTLog.HttpRepository
             _localStorage = localStorage;
             _navManager = navManager;
         }
-
+        //HTTP methods for calling the API POST, PUT, GET etc
         public async Task<HttpStatusCode> ForgotPassword(ForgotPasswordDTO forgotPasswordDTO )
         {
             forgotPasswordDTO.ClientURI =

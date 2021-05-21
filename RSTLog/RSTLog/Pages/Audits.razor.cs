@@ -52,7 +52,7 @@ namespace RSTLog.Pages
 
         private async Task GetAudits()
         {
-            var pagingResponse = await AuditRepo.GetAudits(_requestParams);
+            var pagingResponse = await AuditRepo.GetAudits(_requestParams, 0);
             AuditList = pagingResponse.Items;
             MetaData = pagingResponse.MetaData;
         }

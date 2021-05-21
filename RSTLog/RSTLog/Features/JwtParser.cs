@@ -9,7 +9,9 @@ namespace RSTLog.Features
 {
     public static class JwtParser
     {
-        
+        //This code is taken from Steve Sandersons Mission control project.
+        //Instead of taking time to reinvent this, this implimentation was a perfect fit. 
+        //https://github.com/SteveSandersonMS/presentation-2019-06-NDCOslo/tree/master/demos/MissionControl
         public static IEnumerable<Claim> ParseClaimsFromJwt(string jwt)
         {
             var claims = new List<Claim>();

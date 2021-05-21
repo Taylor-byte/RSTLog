@@ -12,7 +12,7 @@ namespace RSTLog.Pages
     public partial class Employees
     {
         private Employee _employee = new Employee();
-
+        //Instanciate employee as a list
         public List<Employee> EmployeeList { get; set; } = new List<Employee>();
 
         [Inject]
@@ -34,6 +34,15 @@ namespace RSTLog.Pages
             {
                 Console.WriteLine(employee.Name);
             }
+        }
+
+        private async Task DeleteEmployee(int id)
+        {
+            //Call http repo for delete
+            await EmployeeRepo.DeleteEmployee(id);
+
+
+            await GetEmployees();
         }
     }
 }

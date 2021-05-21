@@ -49,7 +49,7 @@ namespace RSTLog.Pages
 
             ToastService.ShowSuccess($"Action successful." +
                 $"Customer \"{_customer.Name}\" successfully updated.");
-            _customer = new Customer();
+            //_customer = new Customer();
 
         }
 
