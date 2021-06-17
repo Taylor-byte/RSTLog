@@ -18,10 +18,6 @@ namespace RSTLog.DTO
             ErrorMessage = "The passwords entered do not match")]
         public string ConfirmPassword { get; set; }
 
-        //[Required(ErrorMessage = "First Name is required.")]
-        //public string FirstName { get; set; }
 
-        //[Required(ErrorMessage = "Last Name is required.")]
-        //public string LastName { get; set; }
     }
 }
